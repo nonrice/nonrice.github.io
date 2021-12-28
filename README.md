@@ -1,1 +1,1 @@
-Eric website
+Welcome!
