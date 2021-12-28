@@ -1,4 +1,3 @@
-**Welcome!**\
-Visit [about me](https://nonrice.github.io/about/)
-<h1>html test</h1>
-<button>button test</button>
+## Welcome!
+**Visit [about me](https://nonrice.github.io/about/)**\
+**Look at [projects](https://nonrice.github.io/projects/)**
