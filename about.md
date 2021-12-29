@@ -12,6 +12,8 @@ Sports I do include running and tennis. My fastest run was a time of 21 minutes 
 
 I am also on my school's Debate team, and I play the clarinet for my school's top band. Additionally, this year I am participating in the [USACO.](http://www.usaco.org/index.php)
 
+---
+
 **Return to [home](https://nonrice.github.io/)**
 
 <script>document.getElementById("age").textContent = new Date().getFullYear()-2007</script> 

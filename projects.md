@@ -9,4 +9,6 @@ An automessaging script made to automatically get items and money in the ever-po
 ### [Clash Royale Battle Predictor](https://github.com/nonrice/clash-royale-battle-predictor)
 By collecting battle data from top players, the goal is to train an artificial neural network to predict the outcome of any given card matchup. Currently achieves around **60% accuracy, though I am still working on it**. Written in Python, with use of Tensorflow for training.
 
+---
+
 **Return to [home](https://nonrice.github.io/)**
