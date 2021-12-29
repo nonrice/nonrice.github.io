@@ -8,7 +8,7 @@ I am currently <span id="age"></span> years old. I enjoy programming, which is t
 
 I also like to create 3D animations. I upload them [here.](https://www.instagram.com/xarchhh)
 
-Sports I do include running and tennis. **My fastest run was a time of 21:30 for 5 kilometers**. I don't have any achievements in tennis though, because I am still beginner.
+Sports I do include running and tennis. **My fastest run was a time of 21:30 for 5 kilometers**. I don't have any achievements in tennis though, because I am still a rather beginner player.
 
 Lastly, I am as well on my school's Debate team, and I play the clarinet for my school's top band.
 
