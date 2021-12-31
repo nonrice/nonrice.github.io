@@ -1,4 +1,4 @@
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.ico">
 
 ## Welcome!
 **Visit [about me](https://nonrice.github.io/about/)**\
