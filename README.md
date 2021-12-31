@@ -1,4 +1,9 @@
-<link rel="icon" type="image/x-icon" href="https://nonrice.github.io/favicon.ico">
+---
+output:
+  html_document:
+    includes:
+      in_header: header.html
+---
 
 ## Welcome!
 **Visit [about me](https://nonrice.github.io/about/)**\
