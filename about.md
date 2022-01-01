@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 ---
 ### My name is Eric.
-I am currently <span id="age"></span> years old. I enjoy programming, which is the main emphasis of this website. Programming related things I do include competitive programming, machine learning, and overall, making whatever I feel like making.
+I am currently <span id="age"></span> years old. I enjoy programming. Programming related things I do include competitive programming, machine learning, and making I feel like making.
 
 Another thing I have a passion for is creating 3D animations. I upload them [here.](https://www.instagram.com/xarchhh) Taking good photos has also been something I enjoy doing. You can find them [here.](https://www.500px.com/p/widefin)
 
