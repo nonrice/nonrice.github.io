@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 ---
 # My name is Eric.
-I am currently <span id="age"></span> years old. I enjoy programming. Programming related things I do include competitive programming, machine learning, and making I feel like making.
+I enjoy programming. Programming related things I do include competitive programming, machine learning, and making I feel like making.
 
 Another thing I have a passion for is creating 3D animations. I upload them [here.](https://www.instagram.com/xarchhh) Taking good photos has also been something I enjoy doing. You can find them [here.](https://www.500px.com/p/widefin)
 
@@ -15,5 +15,3 @@ I am also on my school's Debate team, and I play the clarinet for my school's to
 ---
 
 **Return to [home](https://nonrice.github.io/)**
-
-<script>document.getElementById("age").textContent = new Date().getFullYear()-2007</script> 
