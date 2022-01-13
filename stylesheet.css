@@ -1,0 +1,11 @@
+.navlink {
+    width: fit-content;
+    margin: 5px;
+    padding: 5px 30px 10px 20px;
+    transition: 0.5s;
+}
+
+.navlink:hover {
+    background-color: black;
+    color: white;
+}
