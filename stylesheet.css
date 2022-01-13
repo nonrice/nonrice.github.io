@@ -1,3 +1,10 @@
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
 .navlink {
     width: fit-content;
     margin: 5px;
