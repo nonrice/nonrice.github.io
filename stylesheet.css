@@ -8,6 +8,8 @@ html, body {
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navlink {
