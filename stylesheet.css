@@ -1,5 +1,6 @@
 html, body {
-    height: 100%
+    height: 100%;
+    background-color: black;
 }
 
 .vertical-center {
@@ -14,13 +15,28 @@ html, body {
 
 .navlink {
     font-weight: bolder;
+    color: white;
     width: fit-content;
     margin: 5px;
     padding: 5px 30px 10px 20px;
     transition: 0.5s;
 }
 
+.navlink-header {
+    background-image: linear-gradient(45deg, #2222AF, #1CB5E0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
 .navlink:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+}
+
+.navlink-header:hover {
+    background-color: white;
+    color: black;
 }
