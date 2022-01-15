@@ -62,16 +62,16 @@ body {
 }
 
 .navitem-header-content-small {
-    display: none
+    display: none;
 }
 
 @media screen and (max-width: 500px) {
     .navitem-header-content-large {
-        display: none
+        display: none;
     }
 
     .navitem-header-content-small {
-        display: block
+        display: inherit;
     }
 
     @keyframes scrollbg {
