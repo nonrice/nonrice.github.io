@@ -1,7 +1,14 @@
 html, body {
     height: 100%;
-    background-color: black;
-    color: white
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("../resources/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 @font-face {
@@ -34,7 +41,7 @@ html, body {
 }
 
 .navitem-header {
-    background-image: linear-gradient(90deg, #ff6469, #ffd36b, #aeffce, #ffd36b, #ff6469);
+    background-image: linear-gradient(90deg, #ff6469, #ffd36b, #96ffc0, #ffd36b, #ff6469);
     background-size: 200%;
     background-clip: text;
 
@@ -88,4 +95,15 @@ html, body {
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.footer {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.footer-cred {
+    cursor: pointer;
+    text-decoration: underline;
 }
