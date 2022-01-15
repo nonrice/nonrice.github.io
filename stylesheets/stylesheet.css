@@ -55,6 +55,7 @@ html, body {
 
 .navfade1 {
     animation: fadein ease 2s;
+    animation-iteration-count: 1;
     animation-delay: 0s;
     animation-fill-mode: both;
 }
