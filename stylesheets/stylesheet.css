@@ -19,14 +19,6 @@ html, body {
     overflow-y: hidden;
 }
 
-@media screen and (max-width: 500px) {
-    .navitem-header[data-abbr]::after { 
-        content: attr(data-abbr); 
-    }
-
-    .navitem-header > span { display: none; }
-}
-
 .navitem {
     font-family: HelveticaBold;
     border-radius: 0.5rem;
@@ -60,6 +52,19 @@ html, body {
 @keyframes scrollbg {
     from { background-position: 0em top; }
     to { background-position: 17em top; }
+}
+
+@media screen and (max-width: 500px) {
+    .navitem-header[data-abbr]::after { 
+        content: attr(data-abbr); 
+    }
+
+    .navitem-header > span { display: none; }
+
+    @keyframes scrollbg {
+        from { background-position: 0em top; }
+        to { background-position: 10.5em top; }
+    }    
 }
 
 .navfade1 {
