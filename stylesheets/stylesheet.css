@@ -71,7 +71,7 @@ body {
     }
 
     .navitem-header-content-small {
-        display: inherit;
+        display: block;
     }
 
     @keyframes scrollbg {
