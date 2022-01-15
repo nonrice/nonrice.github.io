@@ -9,20 +9,26 @@
     <body class="vertical-center">
         <div class="mx-auto" style="padding: 10px">
             <div class="row navfade1">
-                <h1 class="display-1 navitem-header navitem" onclick="window.location.href='/'"">
+                <h1 class="display-1 navitem-header navitem" id="navitem-header" onclick="window.location.href='/'"">
                     nonrice.github.io
                 </h1>
             </div>
             <div class="row navfade2">
                 <h1 class="display-1 navitem" onclick="window.location.href='/about'">
-                    About
+                     About
                 </h1>
             </div>
             <div class="row navfade3">
                 <h1 class="display-1 navitem" onclick="window.location.href='/projects'">
-                    Projects    
+                     Projects    
                 </h1>
             </div>
         </div>
+        <script>
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            if (width <= 600) {
+                document.getElementById("navitem-header").textContent = "~/nonrice"
+            }
+        </script>
     </body>
 </html>
