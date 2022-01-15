@@ -53,26 +53,22 @@ html, body {
     to { background-position: 17em top; }
 }
 
-.row {
-    opacity: 0;
-}
-
 .navfade1 {
     animation: fadein ease 2s;
     animation-delay: 0s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 
 .navfade2 {
     animation: fadein ease 2s;
     animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 
 .navfade3 {
     animation: fadein ease 2s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 
 @keyframes fadein {
