@@ -9,9 +9,10 @@
     <body class="vertical-center">
         <div class="mx-auto" style="padding: 10px">
             <div class="row navfade1">
-                <h1 class="display-1 navitem-header navitem" id="navitem-header" onclick="window.location.href='/'"">
-                    nonrice.github.io
+                <h1 class="display-1 navitem-header navitem" id="navitem-header" onclick="window.location.href='/'"" data-abbr="~/nonrice">
+                    <span>nonrice.github.io</span>
                 </h1>
+                
             </div>
             <div class="row navfade2">
                 <h1 class="display-1 navitem" onclick="window.location.href='/about'">
@@ -24,22 +25,5 @@
                 </h1>
             </div>
         </div>
-        <script>
-            var mq = window.matchMedia( "(max-width: 500px)" );
-            if (mq.matches) {
-                document.getElementById("navitem-header").textContent = "~/nonrice"
-            } else {
-                document.getElementById("navitem-header").textContent = "nonrice.github.io"
-            }
-
-            document.getElementsByTagName("BODY")[0].onresize = function(){
-                var mq = window.matchMedia( "(max-width: 500px)" );
-                if (mq.matches) {
-                    document.getElementById("navitem-header").textContent = "~/nonrice"
-                } else {
-                    document.getElementById("navitem-header").textContent = "nonrice.github.io"
-                }
-            }
-        </script>
     </body>
 </html>

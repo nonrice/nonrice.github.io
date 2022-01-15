@@ -19,10 +19,18 @@ html, body {
     overflow-y: hidden;
 }
 
+@media screen and (max-width: 500px) {
+    .navitem-header[data-abbr]::after { 
+        content: attr(data-abbr); 
+    }
+
+    .navitem-header > span { display: none; }
+}
+
 .navitem {
     font-family: HelveticaBold;
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1.25rem 0.5rem 1rem;
     cursor: pointer;
     width: fit-content;
     transition: 0.5s;    
