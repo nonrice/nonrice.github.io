@@ -61,16 +61,22 @@ body {
     to { background-position: 17em top; }
 }
 
+.navitem-header-content-small {
+    display: none
+}
+
 @media screen and (max-width: 500px) {
-    .navitem-header[data-abbr]::after { 
-        content: attr(data-abbr); 
+    .navitem-header-content-large {
+        display: none
     }
 
-    .navitem-header > span { display: none; }
+    .navitem-header-content-small {
+        display: block
+    }
 
     @keyframes scrollbg {
         from { background-position: 0em top; }
-        to { background-position: 10.5em top; }
+        to { background-position: 11.5em top; }
     }    
 }
 
