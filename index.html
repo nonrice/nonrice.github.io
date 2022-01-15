@@ -25,9 +25,20 @@
             </div>
         </div>
         <script>
-            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-            if (width <= 600) {
+            var mq = window.matchMedia( "(max-width: 500px)" );
+            if (mq.matches) {
                 document.getElementById("navitem-header").textContent = "~/nonrice"
+            } else {
+                document.getElementById("navitem-header").textContent = "nonrice.github.io"
+            }
+
+            document.getElementsByTagName("BODY")[0].onresize = function(){
+                var mq = window.matchMedia( "(max-width: 500px)" );
+                if (mq.matches) {
+                    document.getElementById("navitem-header").textContent = "~/nonrice"
+                } else {
+                    document.getElementById("navitem-header").textContent = "nonrice.github.io"
+                }
             }
         </script>
     </body>

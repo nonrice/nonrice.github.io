@@ -22,7 +22,7 @@ html, body {
 .navitem {
     font-family: HelveticaBold;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     cursor: pointer;
     width: fit-content;
     transition: 0.5s;    
