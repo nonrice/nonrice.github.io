@@ -41,7 +41,7 @@ body {
 }
 
 .navitem-header {
-    opacity: 100;
+    display: block;
     background-image: linear-gradient(90deg, #ff6469, #ffd36b, #96ffc0, #ffd36b, #ff6469);
     background-size: 200%;
     background-clip: text;
