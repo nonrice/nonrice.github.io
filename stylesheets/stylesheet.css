@@ -35,7 +35,7 @@ body {
     transition: 0.5s;    
 }
 
-.navitem:hover {
+.navitem-selectable:hover {
     background-color: white;
     color: black;
 }
@@ -54,17 +54,26 @@ body {
     -ms-text-fill-color: transparent;
 
     background-position: 0em top;
-    animation: scrollbg linear 9s infinite;
 }
 
-@keyframes scrollbg {
-    from { background-position: 0em top; }
-    to { background-position: 17em top; }
+.navitem-header-content-large {
+    animation: scrollbg linear 9s infinite;
 }
 
 .navitem-header-content-small {
     display: none;
+    animation: scrollbg-small linear 9s infinite;
 }
+
+@keyframes scrollbg {
+    from { background-position: 0em top; }
+    to { background-position: 16.25em top; }
+}
+
+@keyframes scrollbg-small {
+    from { background-position: 0em top; }
+    to { background-position: 9.75em top; }
+}    
 
 @media screen and (max-width: 500px) {
     .navitem-header-content-large {
@@ -74,11 +83,6 @@ body {
     .navitem-header-content-small {
         display: block;
     }
-
-    @keyframes scrollbg {
-        from { background-position: 0em top; }
-        to { background-position: 11.5em top; }
-    }    
 }
 
 .navfade1 {
