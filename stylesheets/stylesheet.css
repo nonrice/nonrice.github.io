@@ -16,6 +16,11 @@ body {
     src: url("../resources/Helvetica-Bold-Font.ttf")
 }
 
+@font-face {
+    font-family: "Helvetica";
+    src: url("../resources/Helvetica.ttf")
+}
+
 .vertical-center {
     height: 100%;
     min-height: 100%;
@@ -109,11 +114,17 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 2em;
+    right: 3em;
 }
 
 .footer-cred {
+    font-family: Helvetica;
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.footer-cred:hover {
+    color: rgba(255, 255, 255, 1);
 }
