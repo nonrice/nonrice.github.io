@@ -79,6 +79,12 @@ body {
     to { background-position: 9.75em top; }
 }    
 
+.footer {
+    position: absolute;
+    bottom: 2em;
+    right: 3em;
+}
+
 @media screen and (max-width: 500px) {
     .navitem-header-content-large {
         display: none;
@@ -86,6 +92,11 @@ body {
 
     .navitem-header-content-small {
         display: block;
+    }
+
+    .footer {
+        bottom: 0em;
+        right: 1em;
     }
 }
 
@@ -110,12 +121,6 @@ body {
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.footer {
-    position: absolute;
-    bottom: 2em;
-    right: 3em;
 }
 
 .footer-cred {
