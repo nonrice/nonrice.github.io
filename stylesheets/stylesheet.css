@@ -1,3 +1,5 @@
+/* Mainly only for index page, but defines a few more universal classes to be used */
+
 html, body {
     height: 100%;
     color: white;
@@ -59,7 +61,7 @@ body {
     -ms-text-fill-color: transparent;
 
     background-position: 0em top;
-    animation: scrollbg linear reverse 9s infinite;
+    animation: scrollbg linear reverse 9s infinite !important;
 }
 
 .navitem-header-content-small {

@@ -1,0 +1,34 @@
+/* Styles to overwrite and add to basic stylesheet, for simple text content pages */
+
+.vertical-center {
+    padding: 25vh 1em 1em 1em;
+    display: block;
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: "HelveticaBold";
+    src: url("../resources/Helvetica-Bold-Font.ttf")
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../resources/Helvetica.ttf")
+}
+
+.navitem {
+    padding: 0.5rem 1.25rem 1rem 0rem;
+}
+
+.lead-content {
+    margin-bottom: 1rem;
+    max-width: 30ch;
+}
+
+.content {
+    max-width: 75ch;
+}
+
+.main {
+    width: fit-content;
+}
