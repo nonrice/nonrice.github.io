@@ -39,7 +39,7 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     width: fit-content;
-    padding: 0.25rem 1.25rem 0.25rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     transition: 0.5s;    
 }
 
