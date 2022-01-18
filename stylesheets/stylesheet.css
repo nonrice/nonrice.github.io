@@ -112,6 +112,12 @@ body {
     animation-fill-mode: both;
 }
 
+.navfade4 {
+    animation: fadein ease 2s;
+    animation-delay: 1.3s;
+    animation-fill-mode: both;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
