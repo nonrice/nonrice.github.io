@@ -17,7 +17,7 @@
 }
 
 .navitem {
-    padding: 0.5rem 1.25rem 0.25rem 0rem;
+    padding: 0.5rem 1.25rem 0.35rem 0rem;
 }
 
 .lead-content {
@@ -49,17 +49,12 @@
     padding: 2rem;
     margin: 1rem;
     border-radius: 1rem;
-    box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.20);
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
     width: fit-content;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.project:hover {
-    backdrop-filter: blur(15px);
-    background-color: rgba(255, 255, 255, 0.30);
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1rem);
+    -moz-backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
 }
 
 @media screen and (max-width: 500px) {

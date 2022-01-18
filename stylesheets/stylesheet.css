@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)), url("../resources/bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url("../resources/bg2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,11 +35,11 @@ body {
 }
 
 .navitem {
-    font-family: HelveticaBold;
+    font-weight: bolder;
     border-radius: 0.5rem;
     cursor: pointer;
     width: fit-content;
-    padding: 0.5rem 1.25rem 0.25rem 1rem;
+    padding: 0.25rem 1.25rem 0.25rem 1rem;
     transition: 0.5s;    
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .navitem-header {
-    background-image: linear-gradient(90deg, #ff6469, #ffd36b, #96ffc0, #ffd36b, #ff6469);
+    background-image: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59, #c471ed, #12c2e9);
     background-size: 200%;
     background-clip: text;
 
