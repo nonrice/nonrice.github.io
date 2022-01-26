@@ -1,4 +1,4 @@
-# nonrice.github.io
+# [nonrice.github.io](https://nonrice.github.io)
 
 Personal website.
 
