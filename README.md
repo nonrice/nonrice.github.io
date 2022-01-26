@@ -1,6 +1,6 @@
-# [nonrice.github.io](https://nonrice.github.io)
+# nonrice.github.io
 
-Personal website.
+Personal website- [onrice.github.io](https://nonrice.github.io)
 
 ### Frameworks:
 * Bootstrap
