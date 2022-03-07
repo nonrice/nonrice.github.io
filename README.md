@@ -2,6 +2,6 @@
 
 Personal website- [nonrice.github.io](https://nonrice.github.io)
 
-### Frameworks:
+### "Frameworks":
 * Bootstrap
 * Font Awesome
