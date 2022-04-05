@@ -1,7 +1,7 @@
 /* Styles to overwrite and add to basic stylesheet, for simple text content pages */
 
 .vertical-center {
-    padding: 25vh 1em 1em 1em;
+    padding: 20vh 1em 1em 1em;
     display: block;
     overflow-y: scroll;
 }
@@ -54,8 +54,8 @@
     margin: 1rem 0.5rem;
     border-radius: 1rem;
     width: fit-content;
-    box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.15);
-    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(1rem);
     -moz-backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);

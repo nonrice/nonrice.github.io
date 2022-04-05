@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../resources/bg2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)), url("https://images.unsplash.com/photo-1647888162325-346cc541bcc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,7 +39,7 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     width: fit-content;
-    padding: 0.8rem 1rem 1.2rem 1rem;
+    padding: 0.165rem 1rem 0.4rem 1rem;
     transition: 0.5s;    
 }
 
@@ -118,6 +118,12 @@ body {
     animation-fill-mode: both;
 }
 
+.navfade5 {
+    animation: fadein ease 2s;
+    animation-delay: 1.7s;
+    animation-fill-mode: both;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -131,5 +137,15 @@ body {
 }
 
 .footer-cred:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.link-icons > * {
+    color: rgba(255, 255, 255, 0.75);
+    margin-right: 0.15em;
+    transition: 0.5s;
+}
+
+.link-icons > *:hover{
     color: rgba(255, 255, 255, 1);
 }
