@@ -51,7 +51,7 @@
     color: white;
 }
 
-h1, h3 {
+h1, h3, strong {
     text-shadow: 0px 0px 2rem white;
 }
 
