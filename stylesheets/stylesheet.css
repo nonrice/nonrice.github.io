@@ -94,8 +94,9 @@ body {
 }
 
 .link-icons > *{
-    color: #eaeaea;
+    color: #eeeeee;
     margin: 0.1em 0.1em 0.05em 0.1em;
+    cursor: pointer;
     transition: 0.5s;
 }
 
