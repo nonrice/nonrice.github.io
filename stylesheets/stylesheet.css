@@ -49,8 +49,7 @@ body {
 }
 
 .navitem-header {
-    background-image: linear-gradient(to right, #12C2E9, #C471ED, #F64F59, #C471ED, #12C2E9);
-    background-size: 200%;
+    background-image: linear-gradient(to right, #12C2E9, #C471ED, #F64F59);
     background-clip: text;
 
     -webkit-background-clip: text;
@@ -59,18 +58,10 @@ body {
     -moz-text-fill-color: transparent; 
     -ms-background-clip: text;
     -ms-text-fill-color: transparent;
-
-    background-position: 0em top;
-    animation: scrollbg linear reverse 9s infinite !important;
 }
 
 .navitem-header-content-small {
     display: none;
-}
-
-@keyframes scrollbg {
-    from { background-position: 0% top; }
-    to { background-position: 200% top; }
 }
 
 .footer {
