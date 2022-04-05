@@ -16,17 +16,24 @@
     src: url("../resources/Helvetica.ttf")
 }
 
-.navitem {
-    padding: 0.5rem 1rem 0.5rem 0rem;
-}
 
-.lead-content {
-    margin-bottom: 1rem;
-    max-width: 30ch;
+.content {
+    max-width: 75ch;
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 1.5rem;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    background-color: black;
+    color: white;
 }
 
 .content {
     max-width: 75ch;
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .inline {
@@ -34,31 +41,18 @@
     padding: 1rem;
 }
 
-.homelink {
-    color: rgba(255, 255, 255, 0.5);
-    display: inline;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.homelink:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-.project-lister{
-    max-width: 120ch;
-}
-
 .project {
     padding: 2rem;
-    margin: 1rem 0.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
     border-radius: 1rem;
     width: fit-content;
-    box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(1rem);
-    -moz-backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
+    background-color: black;
+    color: white;
+}
+
+h1, h3 {
+    text-shadow: 0px 0px 2rem white;
 }
 
 @media screen and (max-width: 500px) {
@@ -70,6 +64,12 @@
 
 .redirect {
     margin-right: 0.8em;
+    transition: 0.3s;
+}
+
+.redirect:hover {
+    margin-right: 0.8em;
+    box-shadow: 0px 0px 1rem 0.2rem white;
 }
 
 .tool {
