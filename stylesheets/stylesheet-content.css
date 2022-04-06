@@ -49,6 +49,13 @@
     width: fit-content;
     background-color: black;
     color: white;
+    transition: 0.5s;
+
+}
+
+.project-highlight{
+    background-color: white;
+    color: black;
 }
 
 h1, h3, strong {
@@ -74,4 +81,10 @@ h1, h3, strong {
 
 .tool {
     margin: 0.2em;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
 }
