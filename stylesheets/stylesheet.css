@@ -33,7 +33,7 @@ body {
 
 /* wrapper for content center */
 #center {
-    height: 95vh;    
+    height: 95vh;
 
     display: flex;
     justify-content: center;
@@ -41,6 +41,10 @@ body {
 
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#main {
+    max-width: 75ch;
 }
 
 
@@ -60,17 +64,13 @@ body {
     color: #dfbf8e;
 }
 
-.content {
-    max-width: 75ch;
+.term-char{
+    cursor: default;
+    transition: 1s;
 }
 
-.link {
-    text-decoration: underline;
-    cursor: pointer;
-    transition: 0.5s;
+.term-char:hover{
+    background-color: #dfbf8e;
+    color: #282828;
+    transition: 0s;
 }
-
-.link:hover {
-    color: #dfbf8e;
-}
-
