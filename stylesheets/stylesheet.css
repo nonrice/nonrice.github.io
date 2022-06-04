@@ -53,14 +53,24 @@ body {
 .icon {
     margin-right: 0.5rem;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .icon:hover {
     color: #dfbf8e;
-    cursor: pointer;
 }
 
 .content {
-    max-width: 90ch;
+    max-width: 75ch;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.link:hover {
+    color: #dfbf8e;
 }
 
