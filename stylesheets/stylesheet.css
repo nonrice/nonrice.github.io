@@ -1,105 +1,66 @@
-/* Mainly only for index page, but defines a few more universal classes to be used */
-
-html, body {
-    height: 100%;
-    color: white;
+/* font management */
+@font-face {
+    font-family: Meslo;
+    src: url(../resources/MesloLGM.ttf);
 }
 
+@font-face {
+    font-family: MesloBold;
+    src: url(../resources/MesloLGMBold.ttf);
+}
+
+* {
+    font-family: Meslo;
+}
+
+.bold {
+    font-family: MesloBold;
+}
+
+
+
+/* coloring */
 body {
-    background-image: url("../resources/bg5.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-attachment: fixed;
+    background-color: #282828;
+    color: #dfbf8e;
 }
 
-@font-face {
-    font-family: "HelveticaBold";
-    src: url("../resources/Helvetica-Bold-Font.ttf")
+.hi {
+    color: #e78a4e;
 }
 
-@font-face {
-    font-family: "Helvetica";
-    src: url("../resources/Helvetica.ttf")
-}
 
-.vertical-center {
-    height: 100%;
-    min-height: 100%;
-    box-sizing: border-box;
+
+/* wrapper for content center */
+#center {
+    height: 95vh;    
+
     display: flex;
+    justify-content: center;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
+
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.navitem {
-    background-color: black;
-    font-weight: bolder;
-    border-radius: 0.5rem;
-    width: fit-content;
-    padding: 0.165rem 1rem 0.4rem 1rem;
-    transition: 0.5s;    
+
+
+/* Actual content adjustments */
+.row {
+    margin: 0;
 }
 
-.navitem-selectable {
-    cursor: pointer;
-}
-
-.navitem-selectable:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-}
-
-.navitem-header-content-small {
-    display: none;
-}
-
-.footer {
-    position: absolute;
-    bottom: 2em;
-    right: 3em;
-}
-
-@media screen and (max-width: 500px) {
-    .navitem-header-content-large {
-        display: none;
-    }
-
-    .navitem-header-content-small {
-        display: block;
-    }
-
-    .footer {
-        bottom: 0.5em;
-        right: 1.5em;
-    }
-} 
-.footer-cred {
-    font-family: Helvetica;
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
+.icon {
+    margin-right: 0.5rem;
     transition: 0.5s;
 }
 
-.footer-cred:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-.link-icons {
-    width: fit-content;
-    padding-bottom: 0.3em;
-}
-
-.link-icons > *{
-    color: #eeeeee;
-    margin: 0.1em 0.1em 0.05em 0.1em;
+.icon:hover {
+    color: #dfbf8e;
     cursor: pointer;
-    transition: 0.5s;
 }
 
-.link-icons > *:hover{
-    color: #FFFFFF;
+.content {
+    max-width: 90ch;
 }
+
