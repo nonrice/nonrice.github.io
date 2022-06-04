@@ -32,12 +32,13 @@ body {
 
 
 /* wrapper for content center */
-#center {
-    height: 95vh;
+body {
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     padding-left: 10px;
     padding-right: 10px;
