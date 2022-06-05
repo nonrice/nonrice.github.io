@@ -15,6 +15,11 @@
 
 .bold {
     font-family: MesloBold;
+    text-shadow: currentColor 0px 0px 20px;
+}
+
+.small {
+    font-size: 0.5rem;
 }
 
 
