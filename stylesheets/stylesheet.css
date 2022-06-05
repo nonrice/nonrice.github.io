@@ -75,16 +75,17 @@ body {
 }
 
 .icon:hover {
-    color: var(--fore);
+    color: var(--fore) !important;
 }
 
-.term-char{
-    cursor: default;
-    transition: 1s;
+#link-github {
+    color: var(--cyan);
 }
 
-.term-char:hover{
-    background-color: var(--fore);
-    color: var(--back);
-    transition: 0s;
+#link-discord {
+    color: var(--magenta);
+}
+
+#link-codeforces {
+    color: var(--red);
 }
