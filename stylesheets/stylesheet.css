@@ -15,7 +15,10 @@
 
 .bold {
     font-family: MesloBold;
-    
+}
+
+.small {
+    font-size: 0.6em;
 }
 
 
@@ -33,7 +36,7 @@
     :root {
         --background: #babbf9;
         --foreground: #120f19;
-        --accent: #6746b5;    
+        --accent: #7e2ce8;    
     }
 }
 
