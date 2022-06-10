@@ -15,27 +15,26 @@
 
 .bold {
     font-family: MesloBold;
-    text-shadow: currentColor 0px 0px 20px;
-}
-
-.small {
-    font-size: 0.6em;
+    
 }
 
 
 
 /* coloring */
-:root {
-    --foreground: #dfbf8e;
-    --background: #282828;
-    --black: #665c54;
-    --red: #ea6962;
-    --green: #a9b665;
-    --yellow: #e78a4e;
-    --blue: #7daea3;
-    --magenta: #d3869b;
-    --cyan: #89b482;
-    --white: #dfbf8e;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #201e29;
+        --foreground: #d9e0ee;
+        --accent: #c3e5b9;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #babbf9;
+        --foreground: #120f19;
+        --accent: #6746b5;    
+    }
 }
 
 body {
@@ -44,9 +43,9 @@ body {
 }
 
 .hi {
-    color: var(--yellow);
+    color: var(--accent);
+    text-shadow: currentColor 0 0 20px;
 }
-
 
 
 /* wrapper for content center */
@@ -72,25 +71,18 @@ body {
 .row {
     margin: 0;
 }
-
 .icon {
-    margin-right: 0.5rem;
+    font-family: none;
+
+    margin: 1px 3px 0 0;
+    padding: 5px;
+    border-radius: 0.2em;
+
     transition: 0.5s;
     cursor: pointer;
 }
 
 .icon:hover {
-    color: var(--foreground) !important;
-}
-
-#link-github {
-    color: var(--cyan);
-}
-
-#link-discord {
-    color: var(--magenta);
-}
-
-#link-codeforces {
-    color: var(--red);
+    background-color: var(--foreground);
+    color: var(--background);
 }
