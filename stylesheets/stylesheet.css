@@ -94,3 +94,8 @@ body {
 #link-codeforces {
     color: var(--red);
 }
+
+#link-kaggle {
+    color: var(--blue);
+    font-size: 0.9em;
+}
