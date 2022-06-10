@@ -19,15 +19,15 @@
 }
 
 .small {
-    font-size: 0.5rem;
+    font-size: 0.6em;
 }
 
 
 
 /* coloring */
 :root {
-    --fore: #dfbf8e;
-    --back: #282828;
+    --foreground: #dfbf8e;
+    --background: #282828;
     --black: #665c54;
     --red: #ea6962;
     --green: #a9b665;
@@ -39,8 +39,8 @@
 }
 
 body {
-    background-color: var(--back);
-    color: var(--fore);
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 .hi {
@@ -63,7 +63,7 @@ body {
 }
 
 #main {
-    max-width: 75ch;
+    max-width: 71ch;
 }
 
 
@@ -80,7 +80,7 @@ body {
 }
 
 .icon:hover {
-    color: var(--fore) !important;
+    color: var(--foreground) !important;
 }
 
 #link-github {
@@ -93,9 +93,4 @@ body {
 
 #link-codeforces {
     color: var(--red);
-}
-
-#link-kaggle {
-    color: var(--blue);
-    font-size: 0.9em;
 }
