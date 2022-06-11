@@ -34,10 +34,11 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --background: #babbf9;
-        --foreground: #120f19;
-        --accent: #7e2ce8;    
+        --background: #eaeaef;
+        --foreground: #282828;
+        --accent: #ec4a2a;    
     }
+
 }
 
 body {
@@ -49,6 +50,7 @@ body {
     color: var(--accent);
     text-shadow: currentColor 0 0 20px;
 }
+
 
 
 /* wrapper for content center */
