@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eric Xue&#39;s Web Site</title>
+    <title>Home on Eric Xue&#39;s Web Site</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Eric Xue&#39;s Web Site</description>
+    <description>Recent content in Home on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Feb 2024 20:33:41 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 19:32:34 -0400</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
     <item>
       <title>SQRT Decomposition On Queries</title>
       <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
+      
       <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
-      <description>Versatile online range queries technique.</description>
+      <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as another popular algorithm (Mo&amp;rsquo;s Algorithm).&lt;/p&gt;
+&lt;p&gt;The best way to explain this technique is through example. You have the problem:&lt;/p&gt;
+&lt;p&gt;You have an array $a$ of $n$ integers. Process $q$ queries. Queries come in two types:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add $x$ to the range $[l, r]$&lt;/li&gt;
+&lt;li&gt;Compute the sum of the range $[l, r]$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let&amp;rsquo;s see a naive solution: maintain prefix sum to compute type 2 queries in $\mathcal{O}(1)$. Then perform type 1 queries in $\mathcal{O}(n)$. It&amp;rsquo;s too slow if we have many type 1 queries.&lt;/p&gt;
+&lt;p&gt;First observe- if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$. Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.&lt;/p&gt;
+&lt;p&gt;These two properties give a solution. We maintain prefix sum and a cache of queries. This cache does not exceed size $b$. Now let&amp;rsquo;s look at how queries are handled.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Type 1: Insert the query into the cache&lt;/li&gt;
+&lt;li&gt;Type 2: First use the prefix sum. Then for each query in the cache, add its effect to the answer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What if the cache exceeds size $b$? We need to empty it and apply its effect into the prefix sum. This is just like performing several type 1 queries at the same time, which is doable in linear time.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it. Now we see the running time. Unsurprisingly, $b=\sqrt{q}$. The total time complexity is simple to calculate and is $\mathcal{O}((n+q)\sqrt{q})$. It is fast enough for many problems.&lt;/p&gt;
+&lt;p&gt;Of course, this strategy is slower than segment tree, the primary DS used to tackle such RURQ problems. However, this strategy is far more versatile. You can handle many different kinds of queries and updates, without much thinking.&lt;/p&gt;
+</description>
     </item>
+    
+    
+    
     <item>
       <title>Easier Binary Search</title>
       <link>http://localhost:1313/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
+      
       <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
-      <description>Alternative to traditional binary search.</description>
+      <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;
+&lt;p&gt;Let $f(x)$ be a boolean function defined on the range $[l, r]$. It evaluates to $\text{true}$ for some prefix of $[l, r]$ and $\text{false}$ otherwise. We need to find the largest $x$ which gives a $\text{true}$ result. The implementation is as such:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;step&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The idea is very simple. Start $x$ at the lower bound. Then make steps forward, maintaining $f(x)$ is $\text{true}$. Once no more steps can be made, make the step size smaller and repeat.&lt;/p&gt;
+&lt;p&gt;I think it is a much cleaner implementation of binary search. Yet, the only place I have seen it documented is in this &lt;a href=&#34;https://darrenyao.com/usacobook/cpp.pdf&#34;&gt;introductory USACO book&lt;/a&gt;. However a decent CPer likely could think of it himself.&lt;/p&gt;
+</description>
     </item>
+    
+    
+    
+    
   </channel>
 </rss>
