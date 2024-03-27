@@ -1,0 +1,15 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-us"
+title = "Eric Xue's Web Site"
+theme = "PaperMod"
+
+[params.homeInfoParams]
+Title = "Eric Xue's Web Site"
+Content = "I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also occasionally make web-based or data science projects. Away from the computer, I enjoy distance running, competitive Tetris, playing clarinet, and jump rope."
+
+[[params.socialIcons]]
+name = "Discord"
+url = "https://discord.com/users/788749513519136792"
+[[params.socialIcons]]
+name = "Github"
+url = "https://github.com/nonrice"
