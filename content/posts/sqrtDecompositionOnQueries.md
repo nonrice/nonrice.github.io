@@ -4,7 +4,7 @@ date = 2024-02-20T20:33:41-04:00
 math = true
 summary = "Versatile online range queries technique."
 +++
-You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as another popular algorithm (Mo's Algorithm).
+You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo's Algorithm, SQRT Decomposition).
 
 The best way to explain this technique is through example. You have the problem:
 
@@ -14,7 +14,21 @@ You have an array $a$ of $n$ integers. Process $q$ queries. Queries come in two 
 
 Let's see a naive solution: maintain prefix sum to compute type 2 queries in $\mathcal{O}(1)$. Then perform type 1 queries in $\mathcal{O}(n)$. It's too slow if we have many type 1 queries.
 
-First observe- if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$. Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.
+First observe, if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$ by storing deltas for the end points of each query, then applying them altogether in one sweep.
+```cpp
+for (auto [l, r, x] : updates){
+	d[l] += x;
+	d[r+1] -= x;
+}
+for (int i=1; i<=n; ++i){
+	d[i] += d[i-1];
+}
+for (int i=1; i<=n; ++i){
+	d[i] += d[i-1];
+	p[i] += d[i];
+}
+```
+Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.
 
 These two properties give a solution. We maintain prefix sum and a cache of queries. This cache does not exceed size $b$. Now let's look at how queries are handled.
 - Type 1: Insert the query into the cache

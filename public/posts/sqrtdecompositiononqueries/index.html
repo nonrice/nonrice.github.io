@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
+    <link rel="shortcut icon" href="https://nonrice.github.io/favicon.ico">
     
     <link rel="stylesheet" href="/css/style.min.css">
 
@@ -31,11 +31,11 @@
 
 	
 
-    <link rel="canonical" href="http://localhost:1313/posts/sqrtdecompositiononqueries/" />
+    <link rel="canonical" href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/" />
     <title>SQRT Decomposition On Queries</title>
 </head>
 <body><header id="banner">
-    <h2><a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a></h2>
+    <h2><a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a></h2>
     <nav>
         <ul>
             <li>
@@ -53,7 +53,7 @@
         <div>
                 <time>February 20, 2024</time>
             </div>
-    </header><p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as another popular algorithm (Mo&rsquo;s Algorithm).</p>
+    </header><p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p>
 <p>The best way to explain this technique is through example. You have the problem:</p>
 <p>You have an array $a$ of $n$ integers. Process $q$ queries. Queries come in two types:</p>
 <ol>
@@ -61,7 +61,19 @@
 <li>Compute the sum of the range $[l, r]$</li>
 </ol>
 <p>Let&rsquo;s see a naive solution: maintain prefix sum to compute type 2 queries in $\mathcal{O}(1)$. Then perform type 1 queries in $\mathcal{O}(n)$. It&rsquo;s too slow if we have many type 1 queries.</p>
-<p>First observe- if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$. Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.</p>
+<p>First observe, if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$ by storing deltas for the end points of each query, then applying them altogether in one sweep.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">:</span> <span class="n">updates</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.</p>
 <p>These two properties give a solution. We maintain prefix sum and a cache of queries. This cache does not exceed size $b$. Now let&rsquo;s look at how queries are handled.</p>
 <ul>
 <li>Type 1: Insert the query into the cache</li>
