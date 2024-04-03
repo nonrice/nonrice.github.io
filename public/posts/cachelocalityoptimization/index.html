@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
+    <link rel="shortcut icon" href="https://nonrice.github.io/favicon.ico">
     
     <link rel="stylesheet" href="/css/style.min.css">
 
@@ -31,11 +31,11 @@
 
 	
 
-    <link rel="canonical" href="http://localhost:1313/posts/cachelocalityoptimization/" />
+    <link rel="canonical" href="https://nonrice.github.io/posts/cachelocalityoptimization/" />
     <title>Cache Locality Optimization</title>
 </head>
 <body><header id="banner">
-    <h2><a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a></h2>
+    <h2><a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a></h2>
     <nav>
         <ul>
             <li>
@@ -54,7 +54,7 @@
                 <time>April 2, 2024</time>
             </div>
     </header><p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p>
-<p>A total noob may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.</p>
+<p>An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">		<span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
