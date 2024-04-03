@@ -5,7 +5,7 @@ math = true
 +++
 There is the problem: "Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i<j$ and $a_i\\& a_j = 0$ where $\\&$ denotes the bitwise AND operation."
 
-A total noob may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
+An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
 ```cpp
 for (int i=0; i<n; ++i){
 	for (int j=i; j<n; ++j){
