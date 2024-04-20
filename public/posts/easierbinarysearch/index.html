@@ -1,72 +1,75 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" href="https://nonrice.github.io/favicon.ico">
-    
-    <link rel="stylesheet" href="/css/style.min.css">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Alternative to traditional binary search.">  
 
-	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
+  <title>
+    
+      Easier Binary Search
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.01273a70fa873b012d056499c16bb47955e0e7526c34edb73f05ca8f99f488ebc323423c6557f93f9b42a41de0448a25ce9a1ab577d0bf61e36eaf52a4979a1d.css" integrity="sha512-ASc6cPqHOwEtBWSZwWu0eVXg51JsNO23PwXKj5n0iOvDI0I8ZVf5P5tCpB3gRIolzpoatXfQv2Hjbq9SpJeaHQ==" />
+   <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
     });
+
 </script>
-
-
-	
-
-    <link rel="canonical" href="https://nonrice.github.io/posts/easierbinarysearch/" />
-    <title>Easier Binary Search</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
 </head>
-<body><header id="banner">
-    <h2><a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a></h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/" title="posts">posts</a>
-            </li><li>
-                <a href="/about/" title="about">about</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main id="content">
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">..</a>
+
+
 <article>
-    <header id="post-header">
-        <h1>Easier Binary Search</h1>
-        <div>
-                <time>February 10, 2024</time>
-            </div>
-    </header><p>Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p>
+    <p class="post-meta">
+        <time datetime="2024-02-10 21:24:35 -0400 -0400">
+            2024-02-10
+        </time>
+    </p>
+
+    <h1>Easier Binary Search</h1>
+
+    
+
+    <p>Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p>
 <p>Let $f(x)$ be a boolean function defined on the range $[l, r]$. It evaluates to $\text{true}$ for some prefix of $[l, r]$ and $\text{false}$ otherwise. We need to find the largest $x$ which gives a $\text{true}$ result. The implementation is as such:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">step</span><span class="o">=</span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">step</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span> <span class="n">step</span><span class="o">/=</span><span class="mi">2</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">step</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">&amp;&amp;</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">step</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">x</span> <span class="o">+=</span> <span class="n">step</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#d20f39">int</span> x <span style="color:#04a5e5;font-weight:bold">=</span> l<span style="color:#04a5e5;font-weight:bold">-</span><span style="color:#fe640b">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> step<span style="color:#04a5e5;font-weight:bold">=</span>r<span style="color:#04a5e5;font-weight:bold">-</span>l<span style="color:#04a5e5;font-weight:bold">+</span><span style="color:#fe640b">1</span>; step<span style="color:#04a5e5;font-weight:bold">&gt;=</span><span style="color:#fe640b">1</span>; step<span style="color:#04a5e5;font-weight:bold">/=</span><span style="color:#fe640b">2</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#8839ef">while</span> (x<span style="color:#04a5e5;font-weight:bold">+</span>step <span style="color:#04a5e5;font-weight:bold">&lt;=</span> r <span style="color:#04a5e5;font-weight:bold">&amp;&amp;</span> f(x<span style="color:#04a5e5;font-weight:bold">+</span>step)){
+</span></span><span style="display:flex;"><span>		x <span style="color:#04a5e5;font-weight:bold">+=</span> step;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The idea is very simple. Start $x$ at the lower bound. Then make steps forward, maintaining $f(x)$ is $\text{true}$. Once no more steps can be made, make the step size smaller and repeat.</p>
 <p>I think it is a much cleaner implementation of binary search. Yet, the only place I have seen it documented is in this <a href="https://darrenyao.com/usacobook/cpp.pdf">introductory USACO book</a>. However a decent CPer likely could think of it himself.</p>
+
 </article>
 
-        </main><footer id="footer">
-    
-</footer>
-</body>
-</html>
+            </div>
+        </main>
+    </body></html>

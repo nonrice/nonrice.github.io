@@ -1,59 +1,63 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" href="https://nonrice.github.io/favicon.ico">
-    
-    <link rel="stylesheet" href="/css/style.min.css">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Versatile online range queries technique.">  
 
-	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
+  <title>
+    
+      SQRT Decomposition On Queries
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.01273a70fa873b012d056499c16bb47955e0e7526c34edb73f05ca8f99f488ebc323423c6557f93f9b42a41de0448a25ce9a1ab577d0bf61e36eaf52a4979a1d.css" integrity="sha512-ASc6cPqHOwEtBWSZwWu0eVXg51JsNO23PwXKj5n0iOvDI0I8ZVf5P5tCpB3gRIolzpoatXfQv2Hjbq9SpJeaHQ==" />
+   <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
     });
+
 </script>
-
-
-	
-
-    <link rel="canonical" href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/" />
-    <title>SQRT Decomposition On Queries</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
 </head>
-<body><header id="banner">
-    <h2><a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a></h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/" title="posts">posts</a>
-            </li><li>
-                <a href="/about/" title="about">about</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main id="content">
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">..</a>
+
+
 <article>
-    <header id="post-header">
-        <h1>SQRT Decomposition On Queries</h1>
-        <div>
-                <time>February 20, 2024</time>
-            </div>
-    </header><p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p>
+    <p class="post-meta">
+        <time datetime="2024-02-20 20:33:41 -0400 -0400">
+            2024-02-20
+        </time>
+    </p>
+
+    <h1>SQRT Decomposition On Queries</h1>
+
+    
+
+    <p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p>
 <p>The best way to explain this technique is through example. You have the problem:</p>
 <p>You have an array $a$ of $n$ integers. Process $q$ queries. Queries come in two types:</p>
 <ol>
@@ -62,17 +66,17 @@
 </ol>
 <p>Let&rsquo;s see a naive solution: maintain prefix sum to compute type 2 queries in $\mathcal{O}(1)$. Then perform type 1 queries in $\mathcal{O}(n)$. It&rsquo;s too slow if we have many type 1 queries.</p>
 <p>First observe, if we want to perform several type 1 queries at the same time, it can be done trivially in $\mathcal{O}(n)$ by storing deltas for the end points of each query, then applying them altogether in one sweep.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="o">:</span> <span class="n">updates</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#8839ef">auto</span> [l, r, x] <span style="color:#04a5e5;font-weight:bold">:</span> updates){
+</span></span><span style="display:flex;"><span>	d[l] <span style="color:#04a5e5;font-weight:bold">+=</span> x;
+</span></span><span style="display:flex;"><span>	d[r<span style="color:#04a5e5;font-weight:bold">+</span><span style="color:#fe640b">1</span>] <span style="color:#04a5e5;font-weight:bold">-=</span> x;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> i<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">1</span>; i<span style="color:#04a5e5;font-weight:bold">&lt;=</span>n; <span style="color:#04a5e5;font-weight:bold">++</span>i){
+</span></span><span style="display:flex;"><span>	d[i] <span style="color:#04a5e5;font-weight:bold">+=</span> d[i<span style="color:#04a5e5;font-weight:bold">-</span><span style="color:#fe640b">1</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> i<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">1</span>; i<span style="color:#04a5e5;font-weight:bold">&lt;=</span>n; <span style="color:#04a5e5;font-weight:bold">++</span>i){
+</span></span><span style="display:flex;"><span>	d[i] <span style="color:#04a5e5;font-weight:bold">+=</span> d[i<span style="color:#04a5e5;font-weight:bold">-</span><span style="color:#fe640b">1</span>];
+</span></span><span style="display:flex;"><span>	p[i] <span style="color:#04a5e5;font-weight:bold">+=</span> d[i];
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Secondly observe, given a type 1 query and a type 2 query, you can easily tell the effect of the type 1 query in $\mathcal{O}(1)$ by just looking at their intersection.</p>
 <p>These two properties give a solution. We maintain prefix sum and a cache of queries. This cache does not exceed size $b$. Now let&rsquo;s look at how queries are handled.</p>
 <ul>
@@ -82,10 +86,9 @@
 <p>What if the cache exceeds size $b$? We need to empty it and apply its effect into the prefix sum. This is just like performing several type 1 queries at the same time, which is doable in linear time.</p>
 <p>That&rsquo;s it. Now we see the running time. Unsurprisingly, $b=\sqrt{q}$. The total time complexity is simple to calculate and is $\mathcal{O}((n+q)\sqrt{q})$. It is fast enough for many problems.</p>
 <p>Of course, this strategy is slower than segment tree, the primary DS used to tackle such RURQ problems. However, this strategy is far more versatile. You can handle many different kinds of queries and updates, without much thinking.</p>
+
 </article>
 
-        </main><footer id="footer">
-    
-</footer>
-</body>
-</html>
+            </div>
+        </main>
+    </body></html>

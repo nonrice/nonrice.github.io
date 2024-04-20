@@ -1,81 +1,86 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" href="https://nonrice.github.io/favicon.ico">
-    
-    <link rel="stylesheet" href="/css/style.min.css">
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;
+An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
+for (int i=0; i&lt;n; &#43;&#43;i){ for (int j=i; j&lt;n; &#43;&#43;j){ ans &#43;= (a[i] &amp; a[j]) == 0; } } To test the code I use a randomly generated array with $n=10^5$.">  
 
-	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
+  <title>
+    
+      Cache Locality Optimization
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.01273a70fa873b012d056499c16bb47955e0e7526c34edb73f05ca8f99f488ebc323423c6557f93f9b42a41de0448a25ce9a1ab577d0bf61e36eaf52a4979a1d.css" integrity="sha512-ASc6cPqHOwEtBWSZwWu0eVXg51JsNO23PwXKj5n0iOvDI0I8ZVf5P5tCpB3gRIolzpoatXfQv2Hjbq9SpJeaHQ==" />
+   <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
     });
+
 </script>
-
-
-	
-
-    <link rel="canonical" href="https://nonrice.github.io/posts/cachelocalityoptimization/" />
-    <title>Cache Locality Optimization</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
 </head>
-<body><header id="banner">
-    <h2><a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a></h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/" title="posts">posts</a>
-            </li><li>
-                <a href="/about/" title="about">about</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main id="content">
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">..</a>
+
+
 <article>
-    <header id="post-header">
-        <h1>Cache Locality Optimization</h1>
-        <div>
-                <time>April 2, 2024</time>
-            </div>
-    </header><p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p>
+    <p class="post-meta">
+        <time datetime="2024-04-02 18:08:20 -0400 EDT">
+            2024-04-02
+        </time>
+    </p>
+
+    <h1>Cache Locality Optimization</h1>
+
+    
+
+    <p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p>
 <p>An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> i<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">0</span>; i<span style="color:#04a5e5;font-weight:bold">&lt;</span>n; <span style="color:#04a5e5;font-weight:bold">++</span>i){
+</span></span><span style="display:flex;"><span>	<span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> j<span style="color:#04a5e5;font-weight:bold">=</span>i; j<span style="color:#04a5e5;font-weight:bold">&lt;</span>n; <span style="color:#04a5e5;font-weight:bold">++</span>j){
+</span></span><span style="display:flex;"><span>		ans <span style="color:#04a5e5;font-weight:bold">+=</span> (a[i] <span style="color:#04a5e5;font-weight:bold">&amp;</span> a[j]) <span style="color:#04a5e5;font-weight:bold">==</span> <span style="color:#fe640b">0</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>To test the code I use a randomly generated array with $n=10^5$. With <a href="https://codeforces.com/problemset/customtest">Codeforces custom invocation</a> which automatically runs the program multiple times for accurate timing, the program took 2.9s. The majority of time constraint lies between 1-2s, so this is too slow.</p>
 <p>However, rearranging the sequence of memory access improves the running time. Here the array is broken into blocks of size <code>b</code>. Then, pairs of blocks are enumerated. For the current pair of blocks, one element from each block is chosen to form the pairs that are checked.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">+=</span><span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="n">i</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="n">j</span><span class="p">;</span> <span class="n">w</span><span class="o">&lt;</span><span class="n">j</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="o">++</span><span class="n">w</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">				<span class="n">ans</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">w</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">			<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> i<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">0</span>; i<span style="color:#04a5e5;font-weight:bold">&lt;</span>n; i<span style="color:#04a5e5;font-weight:bold">+=</span>b){
+</span></span><span style="display:flex;"><span>	<span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> j<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">0</span>; j<span style="color:#04a5e5;font-weight:bold">&lt;</span>n; j<span style="color:#04a5e5;font-weight:bold">+=</span>b){
+</span></span><span style="display:flex;"><span>		<span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> k<span style="color:#04a5e5;font-weight:bold">=</span>i; k<span style="color:#04a5e5;font-weight:bold">&lt;</span>i<span style="color:#04a5e5;font-weight:bold">+</span>b; <span style="color:#04a5e5;font-weight:bold">++</span>k){
+</span></span><span style="display:flex;"><span>			<span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> w<span style="color:#04a5e5;font-weight:bold">=</span>j; w<span style="color:#04a5e5;font-weight:bold">&lt;</span>j<span style="color:#04a5e5;font-weight:bold">+</span>b; <span style="color:#04a5e5;font-weight:bold">++</span>w){
+</span></span><span style="display:flex;"><span>				ans <span style="color:#04a5e5;font-weight:bold">+=</span> (a[k] <span style="color:#04a5e5;font-weight:bold">&amp;</span> a[w]) <span style="color:#04a5e5;font-weight:bold">==</span> <span style="color:#fe640b">0</span>;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Typical CPUs will prefetch memory surrounding a memory access, putting into CPU cache which is much faster. Compared to the original approach, this approach leverages this prefetched memory more. The idea of the &ldquo;blocks&rdquo; is to ensure the accesses of <code>a</code> are not as &ldquo;all over the place&rdquo;. As a result, this code runs in 0.8s, a large boost!</p>
+
 </article>
 
-        </main><footer id="footer">
-    
-</footer>
-</body>
-</html>
+            </div>
+        </main>
+    </body></html>

@@ -1,7 +1,7 @@
 +++
 title = 'Cache Locality Optimization'
 date = 2024-04-02T18:08:20-04:00
-math = true
+mathjax = true
 +++
 There is the problem: "Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i<j$ and $a_i\\& a_j = 0$ where $\\&$ denotes the bitwise AND operation."
 

@@ -1,7 +1,7 @@
 +++
 title = 'Easier Binary Search'
 date = 2024-02-10T21:24:35-04:00
-math = true
+mathjax = true
 summary = "Alternative to traditional binary search."
 +++
 Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can't use `lower_bound` or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.
