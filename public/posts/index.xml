@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Apr 2024 18:08:20 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 10:43:58 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MathProblems1</title>
+      <link>http://localhost:1313/posts/mathproblems1/</link>
+      <pubDate>Sun, 21 Apr 2024 10:43:58 -0400</pubDate>
+      <guid>http://localhost:1313/posts/mathproblems1/</guid>
+      <description>I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.&#xA;1. https://mathdash.live/problem/6602937808c7d9edd61d1d8e Substitution gives $7x + 7y = 63$ so $x+y = 9$.&#xA;Squaring it gives $x^2 + 2xy + y^2 = 81$ and using $xy=6$ again the answer is $x^2 + y^2 = \boxed{69}$</description>
+    </item>
     <item>
       <title>Cache Locality Optimization</title>
       <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
