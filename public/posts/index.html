@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<html lang="en-us"><meta charset="utf-8" />
 
   <title>Posts - Eric Xue&#39;s Web Site</title>
 
@@ -9,9 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="Eric Xue's Web Site" />
-<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
-<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
+<link rel="alternate" type="application/rss+xml" href="https://nonrice.github.io/posts/index.xml" title="Eric Xue's Web Site" />
+<link rel="stylesheet" href="https://nonrice.github.io/css/latex.css" />
+<link rel="stylesheet" href="https://nonrice.github.io/css/main.css" />
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 	MathJax = {
@@ -33,6 +33,11 @@
   
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
 <meta name="generator" content="Hugo 0.124.1"><body class="latex-dark-auto">
 
 
@@ -44,8 +49,7 @@
   <nav class="navbar">
   <div class="nav">
     
-
-    <ul class="nav-links">
+    <ol class="nav-links">
       
     </ul>
   </div>
@@ -70,8 +74,8 @@
 
       
         <article class="post-preview">
-  <a href="http://localhost:1313/posts/mathproblems1/">
-      <h2 class="post-title">Math Problems 1</h2>
+  <a href="https://nonrice.github.io/posts/mathproblems1/">
+      <h3 class="post-title">Math Problems 1</h2>
   </a>
   <div class="postmeta">
     <span class="meta-post">
@@ -82,17 +86,15 @@
   </div>
   <div class="post-entry">
     
-      <p>I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.
-1. https://mathdash.live/problem/6602937808c7d9edd61d1d8e Substitution gives $7x + 7y = 63$ so $x+y = 9$.
-Squaring it gives $x^2 + 2xy + y^2 = 81$ and using $xy=6$ again the answer is $x^2 + y^2 = \boxed{69}$</p>
-        <a href="http://localhost:1313/posts/mathproblems1/" class="post-read-more">Read More</a>
+      <p><p>I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.</p></p>
+        <a href="https://nonrice.github.io/posts/mathproblems1/" class="post-read-more">Read More</a>
     
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="http://localhost:1313/posts/cachelocalityoptimization/">
-      <h2 class="post-title">Cache Locality Optimization</h2>
+  <a href="https://nonrice.github.io/posts/cachelocalityoptimization/">
+      <h3 class="post-title">Cache Locality Optimization</h2>
   </a>
   <div class="postmeta">
     <span class="meta-post">
@@ -103,17 +105,15 @@ Squaring it gives $x^2 + 2xy + y^2 = 81$ and using $xy=6$ again the answer is $x
   </div>
   <div class="post-entry">
     
-      <p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;
-An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
-for (int i=0; i&lt;n; ++i){ for (int j=i; j&lt;n; ++j){ ans += (a[i] &amp; a[j]) == 0; } } To test the code I use a randomly generated array with $n=10^5$.</p>
-        <a href="http://localhost:1313/posts/cachelocalityoptimization/" class="post-read-more">Read More</a>
+      <p><p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p></p>
+        <a href="https://nonrice.github.io/posts/cachelocalityoptimization/" class="post-read-more">Read More</a>
     
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="http://localhost:1313/posts/sqrtdecompositiononqueries/">
-      <h2 class="post-title">SQRT Decomposition On Queries</h2>
+  <a href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/">
+      <h3 class="post-title">SQRT Decomposition On Queries</h2>
   </a>
   <div class="postmeta">
     <span class="meta-post">
@@ -124,12 +124,15 @@ for (int i=0; i&lt;n; ++i){ for (int j=i; j&lt;n; ++j){ ans += (a[i] &amp; a[j])
   </div>
   <div class="post-entry">
     
+      <p><p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p></p>
+        <a href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/" class="post-read-more">Read More</a>
+    
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="http://localhost:1313/posts/easierbinarysearch/">
-      <h2 class="post-title">Easier Binary Search</h2>
+  <a href="https://nonrice.github.io/posts/easierbinarysearch/">
+      <h3 class="post-title">Easier Binary Search</h2>
   </a>
   <div class="postmeta">
     <span class="meta-post">
@@ -139,6 +142,9 @@ for (int i=0; i&lt;n; ++i){ for (int j=i; j&lt;n; ++j){ ans += (a[i] &amp; a[j])
 </span>
   </div>
   <div class="post-entry">
+    
+      <p><p>Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p></p>
+        <a href="https://nonrice.github.io/posts/easierbinarysearch/" class="post-read-more">Read More</a>
     
   </div>
 </article>
@@ -154,11 +160,11 @@ for (int i=0; i&lt;n; ++i){ for (int j=i; j&lt;n; ++j){ ans += (a[i] &amp; a[j])
         
         
         
-        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
+        <a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a>,
         
         &copy;
         2024
-        <a href="http://localhost:1313/about/">Eric Xue</a>
+        <a href="https://nonrice.github.io/about/">Eric Xue</a>
       </p>
   </div>
 </footer></body>
