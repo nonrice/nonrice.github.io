@@ -2,9 +2,10 @@
 title = 'SQRT Decomposition On Queries'
 date = 2024-02-20T20:33:41-04:00
 mathjax = true
-summary = "Versatile online range queries technique."
+description = "Versatile online range queries and range update technique"
 +++
 You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo's Algorithm, SQRT Decomposition).
+<!--more-->
 
 The best way to explain this technique is through example. You have the problem:
 

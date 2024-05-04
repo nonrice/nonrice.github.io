@@ -1,9 +1,11 @@
 +++
-title = 'MathProblems1'
+title = 'Math Problems 1'
 date = 2024-04-21T10:43:58-04:00
 mathjax = true
+description = ""
 +++
 I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience. 
+<!--more-->
 
 ## 1. https://mathdash.live/problem/6602937808c7d9edd61d1d8e
 

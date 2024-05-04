@@ -2,8 +2,10 @@
 title = 'Cache Locality Optimization'
 date = 2024-04-02T18:08:20-04:00
 mathjax = true
+description = "Reshaping memory access for a free performance boost."
 +++
 There is the problem: "Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i<j$ and $a_i\\& a_j = 0$ where $\\&$ denotes the bitwise AND operation."
+<!--more-->
 
 An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
 ```cpp

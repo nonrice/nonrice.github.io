@@ -1,7 +1,15 @@
 baseURL = "https://nonrice.github.io"
 languageCode = "en-us"
 title = "Eric Xue's Web Site"
-theme = "hugo-theme-nostyleplease"
+theme = "HugoTeX"
+
+[Params.Author]
+  name = "Eric Xue"
+  abstract = """
+  I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also like to make web-based applications and data science projects.
+
+Away from the computer, I enjoy distance running, competitive Tetris, playing clarinet, and jump rope.
+  """
 
 [markup.highlight]
 tabWidth = 4

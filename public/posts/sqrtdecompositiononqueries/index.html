@@ -1,62 +1,82 @@
 <!DOCTYPE html>
-<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="Versatile online range queries technique.">  
+<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 
-  <title>
-    
-      SQRT Decomposition On Queries
-    
-  </title>
+  <title>SQRT Decomposition On Queries - Eric Xue&#39;s Web Site</title>
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  <meta name="author" content="Eric Xue"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$','$$'], ['\\[', '\\]']],
+		processEscapes: true,
+		processEnvironments: true
+	  },
+	  options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  }
+	};
   
+	window.addEventListener('load', (event) => {
+		document.querySelectorAll("mjx-container").forEach(function(x){
+		  x.parentElement.classList += 'has-jax'})
+	  });
   
-  
-  <link rel="stylesheet" href="/css/main.01273a70fa873b012d056499c16bb47955e0e7526c34edb73f05ca8f99f488ebc323423c6557f93f9b42a41de0448a25ce9a1ab577d0bf61e36eaf52a4979a1d.css" integrity="sha512-ASc6cPqHOwEtBWSZwWu0eVXg51JsNO23PwXKj5n0iOvDI0I8ZVf5P5tCpB3gRIolzpoatXfQv2Hjbq9SpJeaHQ==" />
-   <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
- 
-</head>
-<body a="auto">
-        <main class="page-content" aria-label="Content">
-            <div class="w">
-<a href="/">..</a>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
+<meta name="generator" content="Hugo 0.124.1"><body class="latex-dark-auto">
 
 
-<article>
-    <p class="post-meta">
-        <time datetime="2024-02-20 20:33:41 -0400 -0400">
-            2024-02-20
-        </time>
-    </p>
 
-    <h1>SQRT Decomposition On Queries</h1>
 
+
+
+<header>
+  <nav class="navbar">
+  <div class="nav">
     
 
+    <ul class="nav-links">
+      
+    </ul>
+  </div>
+</nav>
+  <div class="intro-header">
+    <div class="container">
+      <div class="posts-heading">
+        
+          <h1>SQRT Decomposition On Queries</h1>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div id="content">
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      <div class="postmeta">
+        <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  Feb 20, 2024
+  
+</span>
+      </div>
+      <br>
+      
     <p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p>
 <p>The best way to explain this technique is through example. You have the problem:</p>
 <p>You have an array $a$ of $n$ integers. Process $q$ queries. Queries come in two types:</p>
@@ -87,8 +107,25 @@
 <p>That&rsquo;s it. Now we see the running time. Unsurprisingly, $b=\sqrt{q}$. The total time complexity is simple to calculate and is $\mathcal{O}((n+q)\sqrt{q})$. It is fast enough for many problems.</p>
 <p>Of course, this strategy is slower than segment tree, the primary DS used to tackle such RURQ problems. However, this strategy is far more versatile. You can handle many different kinds of queries and updates, without much thinking.</p>
 
-</article>
 
-            </div>
-        </main>
-    </body></html>
+      
+    </article>
+    
+  </div>
+
+        </div><footer>
+  <div class="container">
+    <p class="credits copyright">
+      <p class="credits theme-by">
+        
+        
+        
+        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
+        
+        &copy;
+        2024
+        <a href="http://localhost:1313/about/">Eric Xue</a>
+      </p>
+  </div>
+</footer></body>
+</html>

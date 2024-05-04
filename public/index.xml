@@ -9,32 +9,32 @@
     <lastBuildDate>Sun, 21 Apr 2024 10:43:58 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MathProblems1</title>
+      <title>Math Problems 1</title>
       <link>http://localhost:1313/posts/mathproblems1/</link>
       <pubDate>Sun, 21 Apr 2024 10:43:58 -0400</pubDate>
       <guid>http://localhost:1313/posts/mathproblems1/</guid>
-      <description>I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.&#xA;1. https://mathdash.live/problem/6602937808c7d9edd61d1d8e Substitution gives $7x + 7y = 63$ so $x+y = 9$.&#xA;Squaring it gives $x^2 + 2xy + y^2 = 81$ and using $xy=6$ again the answer is $x^2 + y^2 = \boxed{69}$</description>
+      <description>&lt;p&gt;I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
       <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
       <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
-      <description>There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&#xA;An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.&#xA;for (int i=0; i&amp;lt;n; ++i){ for (int j=i; j&amp;lt;n; ++j){ ans += (a[i] &amp;amp; a[j]) == 0; } } To test the code I use a randomly generated array with $n=10^5$.</description>
+      <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
       <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
       <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
-      <description>Versatile online range queries technique.</description>
+      <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
       <link>http://localhost:1313/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
       <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
-      <description>Alternative to traditional binary search.</description>
+      <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>

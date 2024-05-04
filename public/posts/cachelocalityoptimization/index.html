@@ -1,64 +1,82 @@
 <!DOCTYPE html>
-<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;
-An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.
-for (int i=0; i&lt;n; &#43;&#43;i){ for (int j=i; j&lt;n; &#43;&#43;j){ ans &#43;= (a[i] &amp; a[j]) == 0; } } To test the code I use a randomly generated array with $n=10^5$.">  
+<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 
-  <title>
-    
-      Cache Locality Optimization
-    
-  </title>
+  <title>Cache Locality Optimization - Eric Xue&#39;s Web Site</title>
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  <meta name="author" content="Eric Xue"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$','$$'], ['\\[', '\\]']],
+		processEscapes: true,
+		processEnvironments: true
+	  },
+	  options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  }
+	};
   
+	window.addEventListener('load', (event) => {
+		document.querySelectorAll("mjx-container").forEach(function(x){
+		  x.parentElement.classList += 'has-jax'})
+	  });
   
-  
-  <link rel="stylesheet" href="/css/main.01273a70fa873b012d056499c16bb47955e0e7526c34edb73f05ca8f99f488ebc323423c6557f93f9b42a41de0448a25ce9a1ab577d0bf61e36eaf52a4979a1d.css" integrity="sha512-ASc6cPqHOwEtBWSZwWu0eVXg51JsNO23PwXKj5n0iOvDI0I8ZVf5P5tCpB3gRIolzpoatXfQv2Hjbq9SpJeaHQ==" />
-   <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-
-  window.addEventListener('load', (event) => {
-      document.querySelectorAll("mjx-container").forEach(function(x){
-        x.parentElement.classList += 'has-jax'})
-    });
-
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
- 
-</head>
-<body a="auto">
-        <main class="page-content" aria-label="Content">
-            <div class="w">
-<a href="/">..</a>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
+<meta name="generator" content="Hugo 0.124.1"><body class="latex-dark-auto">
 
 
-<article>
-    <p class="post-meta">
-        <time datetime="2024-04-02 18:08:20 -0400 EDT">
-            2024-04-02
-        </time>
-    </p>
 
-    <h1>Cache Locality Optimization</h1>
 
+
+
+<header>
+  <nav class="navbar">
+  <div class="nav">
     
 
+    <ul class="nav-links">
+      
+    </ul>
+  </div>
+</nav>
+  <div class="intro-header">
+    <div class="container">
+      <div class="posts-heading">
+        
+          <h1>Cache Locality Optimization</h1>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div id="content">
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      <div class="postmeta">
+        <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  Apr 2, 2024
+  
+</span>
+      </div>
+      <br>
+      
     <p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p>
 <p>An inexperienced CPer may disregard the constraint on $n$ and write the obvious $\mathcal{O}(n^2)$ solution.</p>
 <div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> i<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">0</span>; i<span style="color:#04a5e5;font-weight:bold">&lt;</span>n; <span style="color:#04a5e5;font-weight:bold">++</span>i){
@@ -79,8 +97,25 @@ for (int i=0; i&lt;n; &#43;&#43;i){ for (int j=i; j&lt;n; &#43;&#43;j){ ans &#43
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Typical CPUs will prefetch memory surrounding a memory access, putting into CPU cache which is much faster. Compared to the original approach, this approach leverages this prefetched memory more. The idea of the &ldquo;blocks&rdquo; is to ensure the accesses of <code>a</code> are not as &ldquo;all over the place&rdquo;. As a result, this code runs in 0.8s, a large boost!</p>
 
-</article>
 
-            </div>
-        </main>
-    </body></html>
+      
+    </article>
+    
+  </div>
+
+        </div><footer>
+  <div class="container">
+    <p class="credits copyright">
+      <p class="credits theme-by">
+        
+        
+        
+        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
+        
+        &copy;
+        2024
+        <a href="http://localhost:1313/about/">Eric Xue</a>
+      </p>
+  </div>
+</footer></body>
+</html>
