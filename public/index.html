@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><meta charset="utf-8" />
+<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 
   <title>Home - Eric Xue&#39;s Web Site</title>
 
@@ -9,9 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://nonrice.github.io/index.xml" title="Eric Xue's Web Site" />
-<link rel="stylesheet" href="https://nonrice.github.io/css/latex.css" />
-<link rel="stylesheet" href="https://nonrice.github.io/css/main.css" />
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Eric Xue's Web Site" />
+<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 	MathJax = {
@@ -90,7 +90,27 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
 
       
         <article class="post-preview">
-  <a href="https://nonrice.github.io/posts/mathproblems1/">
+  <a href="http://localhost:1313/posts/algebracpproblem/">
+      <h3 class="post-title">Algebra CP Problem</h2>
+  </a>
+  <div class="postmeta">
+    <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  May 19, 2024
+  
+</span>
+  </div>
+  <div class="post-entry">
+    
+      <p>Link: https://codeforces.com/contest/1618/problem/E
+Essentially the problem asks to solve a system of equations: $$ \begin{align*} 1a_1 + 2a_2 + 3a_3 + \ldots + na_n &amp;= b_1\tag{1}\\ 2a_1 + 3a_2 + 4a_3 + \ldots + 1a_n &amp;= b_2\tag{2}\\ &amp;\space\space \vdots\\ na_1 + 1a_2 + 2a_3 + \ldots + (n-1)a_n &amp;= b_n\tag{n} \end{align*} $$ Traditional methods to solve systems are too slow for $n\leq 2\cdot 10^5$. But the structure of the equations means such general algorithms are not needed.</p>
+        <a href="http://localhost:1313/posts/algebracpproblem/" class="post-read-more">Read More</a>
+    
+  </div>
+</article>
+      
+        <article class="post-preview">
+  <a href="http://localhost:1313/posts/mathproblems1/">
       <h3 class="post-title">Math Problems 1</h2>
   </a>
   <div class="postmeta">
@@ -103,13 +123,13 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
   <div class="post-entry">
     
       <p><p>I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.</p></p>
-        <a href="https://nonrice.github.io/posts/mathproblems1/" class="post-read-more">Read More</a>
+        <a href="http://localhost:1313/posts/mathproblems1/" class="post-read-more">Read More</a>
     
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="https://nonrice.github.io/posts/cachelocalityoptimization/">
+  <a href="http://localhost:1313/posts/cachelocalityoptimization/">
       <h3 class="post-title">Cache Locality Optimization</h2>
   </a>
   <div class="postmeta">
@@ -122,13 +142,13 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
   <div class="post-entry">
     
       <p><p>There is the problem: &ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&lt;j$ and $a_i\&amp; a_j = 0$ where $\&amp;$ denotes the bitwise AND operation.&rdquo;</p></p>
-        <a href="https://nonrice.github.io/posts/cachelocalityoptimization/" class="post-read-more">Read More</a>
+        <a href="http://localhost:1313/posts/cachelocalityoptimization/" class="post-read-more">Read More</a>
     
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/">
+  <a href="http://localhost:1313/posts/sqrtdecompositiononqueries/">
       <h3 class="post-title">SQRT Decomposition On Queries</h2>
   </a>
   <div class="postmeta">
@@ -141,13 +161,13 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
   <div class="post-entry">
     
       <p><p>You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&rsquo;s Algorithm, SQRT Decomposition).</p></p>
-        <a href="https://nonrice.github.io/posts/sqrtdecompositiononqueries/" class="post-read-more">Read More</a>
+        <a href="http://localhost:1313/posts/sqrtdecompositiononqueries/" class="post-read-more">Read More</a>
     
   </div>
 </article>
       
         <article class="post-preview">
-  <a href="https://nonrice.github.io/posts/easierbinarysearch/">
+  <a href="http://localhost:1313/posts/easierbinarysearch/">
       <h3 class="post-title">Easier Binary Search</h2>
   </a>
   <div class="postmeta">
@@ -160,7 +180,7 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
   <div class="post-entry">
     
       <p><p>Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p></p>
-        <a href="https://nonrice.github.io/posts/easierbinarysearch/" class="post-read-more">Read More</a>
+        <a href="http://localhost:1313/posts/easierbinarysearch/" class="post-read-more">Read More</a>
     
   </div>
 </article>
@@ -176,11 +196,11 @@ Away from the computer, I enjoy distance running, competitive Tetris, playing cl
         
         
         
-        <a href="https://nonrice.github.io/">Eric Xue&#39;s Web Site</a>,
+        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
         
         &copy;
         2024
-        <a href="https://nonrice.github.io/about/">Eric Xue</a>
+        <a href="http://localhost:1313/about/">Eric Xue</a>
       </p>
   </div>
 </footer></body>

@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Eric Xue&#39;s Web Site</title>
-    <link>https://nonrice.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2024 10:43:58 -0400</lastBuildDate>
-    <atom:link href="https://nonrice.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 May 2024 12:01:09 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algebra CP Problem</title>
+      <link>http://localhost:1313/posts/algebracpproblem/</link>
+      <pubDate>Sun, 19 May 2024 12:01:09 -0400</pubDate>
+      <guid>http://localhost:1313/posts/algebracpproblem/</guid>
+      <description>hello hello</description>
+    </item>
     <item>
       <title>Math Problems 1</title>
-      <link>https://nonrice.github.io/posts/mathproblems1/</link>
+      <link>http://localhost:1313/posts/mathproblems1/</link>
       <pubDate>Sun, 21 Apr 2024 10:43:58 -0400</pubDate>
-      <guid>https://nonrice.github.io/posts/mathproblems1/</guid>
+      <guid>http://localhost:1313/posts/mathproblems1/</guid>
       <description>&lt;p&gt;I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
-      <link>https://nonrice.github.io/posts/cachelocalityoptimization/</link>
+      <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
-      <guid>https://nonrice.github.io/posts/cachelocalityoptimization/</guid>
+      <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
       <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
-      <link>https://nonrice.github.io/posts/sqrtdecompositiononqueries/</link>
+      <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>https://nonrice.github.io/posts/sqrtdecompositiononqueries/</guid>
+      <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
       <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
-      <link>https://nonrice.github.io/posts/easierbinarysearch/</link>
+      <link>http://localhost:1313/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
-      <guid>https://nonrice.github.io/posts/easierbinarysearch/</guid>
+      <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
       <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
   </channel>
