@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Eric Xue&#39;s Web Site</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://nonrice.github.io/posts/</link>
     <description>Recent content in Posts on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 May 2024 12:01:09 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nonrice.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algebra CP Problem</title>
-      <link>http://localhost:1313/posts/algebracpproblem/</link>
+      <link>https://nonrice.github.io/posts/algebracpproblem/</link>
       <pubDate>Sun, 19 May 2024 12:01:09 -0400</pubDate>
-      <guid>http://localhost:1313/posts/algebracpproblem/</guid>
-      <description>hello hello</description>
+      <guid>https://nonrice.github.io/posts/algebracpproblem/</guid>
+      <description>Link: https://codeforces.com/contest/1618/problem/E&#xA;Essentially the problem asks to solve a system of equations: $$ \begin{align*} 1a_1 + 2a_2 + 3a_3 + \ldots + na_n &amp;amp;= b_1\tag{1}\\ 2a_1 + 3a_2 + 4a_3 + \ldots + 1a_n &amp;amp;= b_2\tag{2}\\ &amp;amp;\space\space \vdots\\ na_1 + 1a_2 + 2a_3 + \ldots + (n-1)a_n &amp;amp;= b_n\tag{n} \end{align*} $$ Traditional methods to solve systems are too slow for $n\leq 2\cdot 10^5$. But the structure of the equations means such general algorithms are not needed.</description>
     </item>
     <item>
       <title>Math Problems 1</title>
-      <link>http://localhost:1313/posts/mathproblems1/</link>
+      <link>https://nonrice.github.io/posts/mathproblems1/</link>
       <pubDate>Sun, 21 Apr 2024 10:43:58 -0400</pubDate>
-      <guid>http://localhost:1313/posts/mathproblems1/</guid>
+      <guid>https://nonrice.github.io/posts/mathproblems1/</guid>
       <description>&lt;p&gt;I will write about some math problems I find interesting. I think my goal will be to qualify for AIME through AMC 12. I started competition math very late but I guess enjoying it is more important than starting time. Maybe my CP experience will help me, or maybe this may help my CP experience.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
-      <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
+      <link>https://nonrice.github.io/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
-      <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
+      <guid>https://nonrice.github.io/posts/cachelocalityoptimization/</guid>
       <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
-      <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
+      <link>https://nonrice.github.io/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
+      <guid>https://nonrice.github.io/posts/sqrtdecompositiononqueries/</guid>
       <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
-      <link>http://localhost:1313/posts/easierbinarysearch/</link>
+      <link>https://nonrice.github.io/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
-      <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
+      <guid>https://nonrice.github.io/posts/easierbinarysearch/</guid>
       <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
   </channel>
