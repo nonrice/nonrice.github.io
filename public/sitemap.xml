@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>widefin.com/posts/</loc>
+    <loc>https://widefin.com/posts/</loc>
     <lastmod>2024-06-25T18:29:02-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/posts/summerweek1/</loc>
+    <loc>https://widefin.com/posts/summerweek1/</loc>
     <lastmod>2024-06-23T18:32:41-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/posts/cachelocalityoptimization/</loc>
+    <loc>https://widefin.com/posts/cachelocalityoptimization/</loc>
     <lastmod>2024-04-02T18:08:20-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/</loc>
+    <loc>https://widefin.com/</loc>
     <lastmod>2024-03-27T19:32:34-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/posts/sqrtdecompositiononqueries/</loc>
+    <loc>https://widefin.com/posts/sqrtdecompositiononqueries/</loc>
     <lastmod>2024-02-20T20:33:41-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/posts/easierbinarysearch/</loc>
+    <loc>https://widefin.com/posts/easierbinarysearch/</loc>
     <lastmod>2024-02-10T21:24:35-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/about/</loc>
+    <loc>https://widefin.com/about/</loc>
     <lastmod>2024-02-02T20:33:41-04:00</lastmod>
   </url><url>
-    <loc>widefin.com/categories/</loc>
+    <loc>https://widefin.com/categories/</loc>
   </url><url>
-    <loc>widefin.com/tags/</loc>
+    <loc>https://widefin.com/tags/</loc>
   </url>
 </urlset>
