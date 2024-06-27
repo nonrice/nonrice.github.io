@@ -1,7 +1,7 @@
 +++
-title = 'SummerWeek2'
+title = 'Summer Week 2'
 date = 2024-06-25T18:29:02-04:00
-draft = True 
+draft = true 
 +++
 After the first week I had pretty much settled into Cambridge. 
 

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Eric Xue&#39;s Web Site</title>
-    <link>http://localhost:1313/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in Home on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Jun 2024 18:32:41 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Summer Week 1</title>
-      <link>http://localhost:1313/posts/summerweek1/</link>
+      <link>//localhost:1313/posts/summerweek1/</link>
       <pubDate>Sun, 23 Jun 2024 18:32:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek1/</guid>
+      <guid>//localhost:1313/posts/summerweek1/</guid>
       <description>&lt;p&gt;This summer I have a 6 weeks internship at the McGovern Institute for Brain Research and I want to document what I do there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
-      <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
+      <link>//localhost:1313/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
-      <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
+      <guid>//localhost:1313/posts/cachelocalityoptimization/</guid>
       <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
-      <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
+      <link>//localhost:1313/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
+      <guid>//localhost:1313/posts/sqrtdecompositiononqueries/</guid>
       <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
-      <link>http://localhost:1313/posts/easierbinarysearch/</link>
+      <link>//localhost:1313/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
-      <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
+      <guid>//localhost:1313/posts/easierbinarysearch/</guid>
       <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Fri, 02 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also like to make web-based applications and data science projects.&#xA;Away from the computer, I enjoy distance running, competitive Tetris, playing clarinet, and jump rope.&#xA;Much of my work is on my Github. Give it a visit!&#xA;Github Discord Online judges: Codeforces AtCoder LeetCode </description>
     </item>
   </channel>
