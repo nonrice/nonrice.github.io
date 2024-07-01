@@ -6,8 +6,15 @@
     <description>Recent content in Home on Eric Xue&#39;s Web Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jun 2024 18:32:41 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jun 2024 18:29:02 -0400</lastBuildDate>
     <atom:link href="https://widefin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summer Week 2</title>
+      <link>https://widefin.com/posts/summerweek2/</link>
+      <pubDate>Tue, 25 Jun 2024 18:29:02 -0400</pubDate>
+      <guid>https://widefin.com/posts/summerweek2/</guid>
+      <description>After the first week I had pretty much settled into Cambridge.&#xA;Tongue Tracking Compiling GUI tool This week I experienced what it was like to work with a moderately large, proper C++ project. I guess no experience is complete without large amounts of grappling with build systems. I spent a lot fo time working with Paul in order to get the project building on my laptop. Fortunately I have previous experience with CMake so I wasn&amp;rsquo;t completely lost.</description>
+    </item>
     <item>
       <title>Summer Week 1</title>
       <link>https://widefin.com/posts/summerweek1/</link>
