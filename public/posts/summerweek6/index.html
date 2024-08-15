@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us"><meta charset="utf-8" />
+
+  <title>Final Stretch - Eric Xue&#39;s Web Site</title>
+
+
+  <meta name="author" content="Eric Xue"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="stylesheet" href="https://widefin.com/css/latex.css" />
+<link rel="stylesheet" href="https://widefin.com/css/main.css" />
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$','$$'], ['\\[', '\\]']],
+		processEscapes: true,
+		processEnvironments: true
+	  },
+	  options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  }
+	};
+  
+	window.addEventListener('load', (event) => {
+		document.querySelectorAll("mjx-container").forEach(function(x){
+		  x.parentElement.classList += 'has-jax'})
+	  });
+  
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
+<meta name="generator" content="Hugo 0.128.2"><body class="latex-dark-auto">
+
+
+
+
+
+
+<header>
+  <nav class="navbar">
+  <div class="nav">
+    
+    <ol class="nav-links">
+      
+    </ul>
+  </div>
+</nav>
+  <div class="intro-header">
+    <div class="container">
+      <div class="posts-heading">
+        
+          <h1>Final Stretch</h1>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div id="content">
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      <div class="postmeta">
+        <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  Jul 28, 2024
+  
+</span>
+      </div>
+      <br>
+      
+    <h3 id="whiskertoolbox">WhiskerToolbox</h3>
+<p>So in order to develop the final feature I first had to find a plotting library. It seems that Paul had made a basic analog viewer in the past before, but I think it is way to much effort to do that myself. We settled on a project called <a href="https://github.com/jkriege2/JKQtPlotter">JKQTPlotter</a>. With slightly better knowledge of CMake, I was able to include this library into the source code with just a bit of help from Paul.</p>
+<p>One thing that Paul brought up after I was midway into integrating this library into WhiskerToolbox was that it might not be the best choice in the future, since much of the data may have huge numbers of datapoints, which would slow the plotter down. The library actually had a fast plotting window coded with OpenGL but it was deprecated so we decided our best bet was to switch to another library sometime down the road.</p>
+<p>In a day I was able to sync up the graph with the the analog viewer, and also plot a analog series along the timeline. After that, I added the ability to customize the series by scaling and transforming it. It was also necessary to plot a digital signal, but there wasn&rsquo;t actually a class for the kind of &ldquo;shaded window sequence&rdquo; I was trying to make. There was a class for creating a single &ldquo;shaded window&rdquo;, so I ended up subclassing the general graph class and making it pass down function calls into an array of these single shaded windows.</p>
+<p>Doing all these things required a lot of interaction with the API of the library. This was my first time working with such a small, yet heavily developed library. The magnitude of features it had was on par with industry respected libraries, but the documentation was not. Normally when working with libraries like Qt, a simple Google search about any problem that I might have would return many forum posts, pages of Qt documentation, and maybe even blog posts of people writing their own tutorials for the topic I was searching. For JKQTPlotter, I had nothing, other than the documentation from the developer, which, to his credit was very well written (not that I have any standards yet). It was my first time actually &ldquo;coding with the docs&rdquo;.</p>
+<p>I had a fully fledged graph viewer by Wednesday and continued to iron out some issues both with the graph viewer and in other parts of the application, which was being tested by Jun while labeling experiments. Finally on Thursday, after fully settling on the analog viewer, Paul gave me some demonstration data that I would use in the Friday presentation, which would be solely about WhiskerToolbox and the work I did on it.</p>
+<h3 id="presentation-time">Presentation Time</h3>
+<p>I was surprised that I was not very nervous about the presentation. I had expected to be much more tense but overall I was able to talk fluidly through the presentation. After that I finished the day early, writing a final set of documentation for all of my code and then testing out the new TETR.IO updated which happened to release on the afternoon, right after my presentation.</p>
+<h3 id="last-chance-to-see-maybe-not">Last Chance To See&hellip; Maybe Not?</h3>
+<p>I walked around the MIT campus to conclude my penultimate day in Cambridge and mainly saw some art galleries. They were interesting since they had some &ldquo;true&rdquo; modern art. One of the rooms was bewildering in what it contained as &ldquo;art&rdquo;, sometimes being just a few objects taped to the wall.</p>
+<p>On Saturday I got on the train, leaving the way I came.</p>
+
+
+
+      
+    </article>
+    
+  </div>
+
+        </div><footer>
+  <div class="container">
+    <p class="credits copyright">
+      <p class="credits theme-by">
+        
+        
+        
+        <a href="https://widefin.com/">Eric Xue&#39;s Web Site</a>,
+        
+        &copy;
+        2024
+        <a href="https://widefin.com/about/">Eric Xue</a>
+      </p>
+  </div>
+</footer></body>
+</html>

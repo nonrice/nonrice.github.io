@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us"><meta charset="utf-8" />
+
+  <title>Full Speed - Eric Xue&#39;s Web Site</title>
+
+
+  <meta name="author" content="Eric Xue"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="stylesheet" href="https://widefin.com/css/latex.css" />
+<link rel="stylesheet" href="https://widefin.com/css/main.css" />
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$','$$'], ['\\[', '\\]']],
+		processEscapes: true,
+		processEnvironments: true
+	  },
+	  options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  }
+	};
+  
+	window.addEventListener('load', (event) => {
+		document.querySelectorAll("mjx-container").forEach(function(x){
+		  x.parentElement.classList += 'has-jax'})
+	  });
+  
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
+<meta name="generator" content="Hugo 0.128.2"><body class="latex-dark-auto">
+
+
+
+
+
+
+<header>
+  <nav class="navbar">
+  <div class="nav">
+    
+    <ol class="nav-links">
+      
+    </ul>
+  </div>
+</nav>
+  <div class="intro-header">
+    <div class="container">
+      <div class="posts-heading">
+        
+          <h1>Full Speed</h1>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div id="content">
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      <div class="postmeta">
+        <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  Jul 28, 2024
+  
+</span>
+      </div>
+      <br>
+      
+    <h3 id="whiskertoolbox-app-bundling">WhiskerToolbox: App Bundling</h3>
+<p>In order to have other people be able to use the application, specifically on MacOS since many have Macs, it is necessary to bundle the compiled result into an app package. In the process we came across two very annoying issues.</p>
+<h3 id="dylib-bundling"><code>dylib</code> Bundling</h3>
+<p>In an ironic twist even though we opted for dynamically linking most libraries, in order to ship an app bundle it was necessary to contain them in the finished bundle under the <code>Frameworks</code> folder.</p>
+<p>If we simply handed the compiled result to someone, they would not be able to open it because the executable would be looking for files in the build directory of the developer&rsquo;s computer. In order to fix this we had to bundle all the libraries with the executable, then modify the exectuable&rsquo;s <code>rpath</code> to search for <code>.dylibs</code> in the new location. To do this for the Qt library there was a tool called <code>macdeployqt</code>. However it seems to mangle the application and cause it to be unopenable. The solution was to instead use Qt&rsquo;s function in CMake, which automatically generated a deploy script that worked.</p>
+<p>In order to handle the other libraries, Paul wrote a CMake function to simply copy them into the necessary location and modify the <code>rpath</code>.</p>
+<h3 id="codesigning">Codesigning</h3>
+<p>Having made an app bundle myself before, I thought it was possible to run the newly packaged app without code signing. Unfortunately this wasn&rsquo;t the case, and it was probably because the signatures in the Qt libraries we moved into <code>Frameworks</code> became invalidated or something. Either way the app would crash, not because of any code error but because of the absence of a code signature upon opening.</p>
+<p>Not having a code signature also included one other nuisance, which was that downloaded copies of the apps would be claimed as &ldquo;damaged&rdquo; when in reality it was because Apple had detected the absence of a code signature and put an extended attribute <code>com.apple.quarantine</code> onto the app, disallowing it to be opened. This issue was annoying because while I did deal with it before in the past, I had by then forgotten about it so when Paul sent me test app bundles I thought they were all broken. I really dislike Apple for these misleading practices. Another one we ran into is that even if the app had a proper code signature, if it didn&rsquo;t come from an Apple developer account (which costs $100), MacOS would pretend the app was unopenable. The proper way to open these kind of apps was to right click and open them. Basically Apple forces users to take a backwoods route for no good reason.</p>
+<p>Back to the codesigning topic: on my computer I was able to generate a self signing certificate and add sign the application with it. The next step was to get this signing process into the Github CI, which in the future would be used to automatically create releases of the application upon commits. This part was really irksome as well. I had created my codesigning certificate through a tool that, on MacOS, didn&rsquo;t really seem to have any kind of TUI counterpart, making it impossible to replicate the process on the cloud. Eventually it was Paul who found a working CMake codesigning action by some other people, and got it to work inside of our CI.</p>
+<h3 id="app-icon">App Icon</h3>
+<p>On Friday I quickly updated the CI to give the generated application an app icon. It reused the function for copying libraries, since all that was necessary to make an app icon was to copy a <code>.icns</code> file (which I generated from a PNG on (<a href="https://icns.kitchen">https://icns.kitchen</a>) into the <code>Resources</code> folder of the bundle.</p>
+<p><img src="/images/appicon2.png" alt="App Icon"></p>
+<h3 id="tongue-tracking">Tongue Tracking</h3>
+<p>Continuing with tongue tracking since the beginning of the week, I was able to create analyses of many tongue tracking experiments of Jun&rsquo;s. However, on most of the results, the tracking result was not very good. For the two experiment results that were particularly well tracked, my diagrams were included in Jun&rsquo;s presentation on the lab meeting of Friday this week, which felt pretty great.</p>
+<h3 id="plan-for-the-final-week">Plan for the final week</h3>
+<p>Now that everything packaging related is done for WhiskerToolbox the one thing I have left to do was to finish the final feature, the graph viewer. I am also scheduled to make a presentation on the final day.</p>
+
+
+
+      
+    </article>
+    
+  </div>
+
+        </div><footer>
+  <div class="container">
+    <p class="credits copyright">
+      <p class="credits theme-by">
+        
+        
+        
+        <a href="https://widefin.com/">Eric Xue&#39;s Web Site</a>,
+        
+        &copy;
+        2024
+        <a href="https://widefin.com/about/">Eric Xue</a>
+      </p>
+  </div>
+</footer></body>
+</html>

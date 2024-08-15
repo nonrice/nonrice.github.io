@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us"><meta charset="utf-8" />
+
+  <title>Not So Fast - Eric Xue&#39;s Web Site</title>
+
+
+  <meta name="author" content="Eric Xue"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="stylesheet" href="https://widefin.com/css/latex.css" />
+<link rel="stylesheet" href="https://widefin.com/css/main.css" />
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+	MathJax = {
+	  tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		displayMath: [['$$','$$'], ['\\[', '\\]']],
+		processEscapes: true,
+		processEnvironments: true
+	  },
+	  options: {
+		skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	  }
+	};
+  
+	window.addEventListener('load', (event) => {
+		document.querySelectorAll("mjx-container").forEach(function(x){
+		  x.parentElement.classList += 'has-jax'})
+	  });
+  
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<style>
+	a {
+		color: blue !important;
+	}
+</style>
+<meta name="generator" content="Hugo 0.128.2"><body class="latex-dark-auto">
+
+
+
+
+
+
+<header>
+  <nav class="navbar">
+  <div class="nav">
+    
+    <ol class="nav-links">
+      
+    </ul>
+  </div>
+</nav>
+  <div class="intro-header">
+    <div class="container">
+      <div class="posts-heading">
+        
+          <h1>Not So Fast</h1>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div id="content">
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      <div class="postmeta">
+        <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>
+  Jul 7, 2024
+  
+</span>
+      </div>
+      <br>
+      
+    <p><img src="/images/IMG_0069.jpeg" alt="Whale Watch"></p>
+<p>This was a short week since the 4th and 5th were both holidays, followed immediately by the weekend. I mainly focused on a single thing during this week.</p>
+<h3 id="tongue-tracking">Tongue Tracking</h3>
+<p>For the three days during this week I was working on integrating the GrabCut tool I made into the application. To do this I finally created a Qt widget by myself, where previously I was only modifying existing widgets Paul had added.</p>
+<p>I first translated my Python GrabCut tool into C++ which was pretty easy since OpenCV had C++ bindings as well. I built the app in C++ a little differently by making sure to separate the GUI and the controls, whereas in the Python version they were pretty much interlocked together. My reasoning was as such: in this way it would be very easy to swap the GUI. I developed this C++ version of the tool separately, &ldquo;black boxed&rdquo; in order to avoid interference with the main application. To test it, I quickly wrote up a GUI. The controls portion of the C++ version simply exposed an interface of functions which can then be quickly hooked up to the GUI and tested. Then, when ready to deploy it onto the actual application I only needed to paste the code in, then hook up the interface to the GUI of the actual application.</p>
+<p>The process was not as streamlined as I hoped, but only because creating the GUI inside Qt had a learning curve which I had to figure out. The actual &ldquo;binding&rdquo; of the interface of my C++ tool was pretty straightforward, and satisfying that it had worked exactly liked I had planned it out to do. I am not sure if this is a standard practice for software development elsewhere. But I think it was pretty smooth.</p>
+
+
+
+      
+    </article>
+    
+  </div>
+
+        </div><footer>
+  <div class="container">
+    <p class="credits copyright">
+      <p class="credits theme-by">
+        
+        
+        
+        <a href="https://widefin.com/">Eric Xue&#39;s Web Site</a>,
+        
+        &copy;
+        2024
+        <a href="https://widefin.com/about/">Eric Xue</a>
+      </p>
+  </div>
+</footer></body>
+</html>
