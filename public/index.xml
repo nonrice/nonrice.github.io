@@ -9,42 +9,42 @@
     <lastBuildDate>Sun, 28 Jul 2024 23:30:05 -0400</lastBuildDate>
     <atom:link href="https://widefin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Final Stretch</title>
+      <title>Final Stretch (Week 6)</title>
       <link>https://widefin.com/posts/summerweek6/</link>
       <pubDate>Sun, 28 Jul 2024 23:30:05 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek6/</guid>
       <description>WhiskerToolbox So in order to develop the final feature I first had to find a plotting library. It seems that Paul had made a basic analog viewer in the past before, but I think it is way to much effort to do that myself. We settled on a project called JKQTPlotter. With slightly better knowledge of CMake, I was able to include this library into the source code with just a bit of help from Paul.</description>
     </item>
     <item>
-      <title>Full Speed</title>
+      <title>Me and Paul vs. CMake (Week 5)</title>
       <link>https://widefin.com/posts/summerweek5/</link>
       <pubDate>Sun, 28 Jul 2024 22:57:28 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek5/</guid>
       <description>WhiskerToolbox: App Bundling In order to have other people be able to use the application, specifically on MacOS since many have Macs, it is necessary to bundle the compiled result into an app package. In the process we came across two very annoying issues.&#xA;dylib Bundling In an ironic twist even though we opted for dynamically linking most libraries, in order to ship an app bundle it was necessary to contain them in the finished bundle under the Frameworks folder.</description>
     </item>
     <item>
-      <title>Picking It Up</title>
+      <title>Tongue Tracking Continued (Week 4)</title>
       <link>https://widefin.com/posts/summerweek4/</link>
       <pubDate>Sat, 13 Jul 2024 21:22:38 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek4/</guid>
       <description>Tongue Tracking So work has been getting interesting again. On Monday I reorganized the work from my lab code. It has an interestig structure. I wanted to keep the &amp;ldquo;useful messiness&amp;rdquo; of the workspace, but also have clean directories that are user friendly to others. The solution I came up with was to have a Makefile that would build these clean directories simply by using cp command. As I write this I realize another solution could just be to symlink them.</description>
     </item>
     <item>
-      <title>Not So Fast</title>
+      <title>Tongue Tracking (Week 3)</title>
       <link>https://widefin.com/posts/summerweek3/</link>
       <pubDate>Sun, 07 Jul 2024 12:32:02 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek3/</guid>
       <description>This was a short week since the 4th and 5th were both holidays, followed immediately by the weekend. I mainly focused on a single thing during this week.&#xA;Tongue Tracking For the three days during this week I was working on integrating the GrabCut tool I made into the application. To do this I finally created a Qt widget by myself, where previously I was only modifying existing widgets Paul had added.</description>
     </item>
     <item>
-      <title>Moving Along</title>
+      <title>A Whisker Toolbox (Week 2)</title>
       <link>https://widefin.com/posts/summerweek2/</link>
       <pubDate>Tue, 25 Jun 2024 18:29:02 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek2/</guid>
       <description>After the first week I had pretty much settled into Cambridge. Becoming more clear with the lab&amp;rsquo;s work, I began doing more complicated tasks.&#xA;The GUI tool This week I experienced what it was like to work with a moderately large, proper C++ project. I guess no experience is complete without large amounts of grappling with build systems. I spent a lot of time working with Paul in order to get the project building on my laptop.</description>
     </item>
     <item>
-      <title>Getting Started</title>
+      <title>Getting Started (Week 1)</title>
       <link>https://widefin.com/posts/summerweek1/</link>
       <pubDate>Sun, 23 Jun 2024 18:32:41 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek1/</guid>

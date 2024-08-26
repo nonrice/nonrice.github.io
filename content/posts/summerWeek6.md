@@ -1,5 +1,5 @@
 +++
-title = 'Final Stretch'
+title = 'Final Stretch (Week 6)'
 date = 2024-07-28T23:30:05-04:00
 draft = false 
 +++

@@ -1,5 +1,5 @@
 +++
-title = 'Moving Along'
+title = 'A Whisker Toolbox (Week 2)'
 date = 2024-06-25T18:29:02-04:00
 draft = false  
 +++

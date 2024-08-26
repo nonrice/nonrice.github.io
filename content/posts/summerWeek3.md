@@ -1,5 +1,5 @@
 +++
-title = 'Not So Fast'
+title = 'Tongue Tracking (Week 3)'
 date = 2024-07-07T12:32:02-04:00
 draft = false
 +++

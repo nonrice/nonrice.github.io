@@ -1,5 +1,5 @@
 +++
-title = 'Getting Started'
+title = 'Getting Started (Week 1)'
 date = 2024-06-23T18:32:41-04:00
 draft = false 
 +++
