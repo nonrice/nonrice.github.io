@@ -4,6 +4,9 @@ date = 2024-07-28T23:30:05-04:00
 draft = false 
 +++
 
+I concluded my final week by adding a final large feature, doing lots of refactoring/documentation, and presenting it all at the lab meeting!
+<!--more-->
+
 ### WhiskerToolbox
 So in order to develop the final feature I first had to find a plotting library. It seems that Paul had made a basic analog viewer in the past before, but I think it is way to much effort to do that myself. We settled on a project called [JKQTPlotter](https://github.com/jkriege2/JKQtPlotter). With slightly better knowledge of CMake, I was able to include this library into the source code with just a bit of help from Paul. 
 

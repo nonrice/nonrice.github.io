@@ -7,6 +7,7 @@ draft = false
 ![Whale Watch](/images/IMG_0069.jpeg)
 
 This was a short week since the 4th and 5th were both holidays, followed immediately by the weekend. I mainly focused on a single thing during this week.  
+<!--more-->
 
 ### Tongue Tracking
 For the three days during this week I was working on integrating the GrabCut tool I made into the application. To do this I finally created a Qt widget by myself, where previously I was only modifying existing widgets Paul had added.

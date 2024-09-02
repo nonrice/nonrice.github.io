@@ -3,7 +3,8 @@ title = 'A Whisker Toolbox (Week 2)'
 date = 2024-06-25T18:29:02-04:00
 draft = false  
 +++
-After the first week I had pretty much settled into Cambridge. Becoming more clear with the lab's work, I began doing more complicated tasks. 
+After the first week I had pretty much settled into Cambridge. After becoming more familiar with the lab's work. I began doing more complicated tasks. 
+<!--more-->
 
 ### The GUI tool 
 This week I experienced what it was like to work with a moderately large, proper C++ project. I guess no experience is complete without large amounts of grappling with build systems. I spent a lot of time working with Paul in order to get the project building on my laptop. Fortunately I have previous experience with CMake so I wasn't completely lost. I even managed to debug some errors by myself. However the errors seemed to have a way of progressively becoming harder, and eventually all I could do was show Paul logs and error messages and wait for his help.

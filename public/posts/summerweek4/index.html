@@ -76,7 +76,8 @@
       </div>
       <br>
       
-    <h3 id="tongue-tracking">Tongue Tracking</h3>
+    <p>I had a chance to show some more advanced Python skills this week.</p>
+<h3 id="tongue-tracking">Tongue Tracking</h3>
 <p>So work has been getting interesting again. On Monday I reorganized the work from my lab code. It has an interestig structure. I wanted to keep the &ldquo;useful messiness&rdquo; of the workspace, but also have clean directories that are user friendly to others. The solution I came up with was to have a Makefile that would build these clean directories simply by using <code>cp</code> command. As I write this I realize another solution could just be to symlink them. I&rsquo;ll give it a try the start of next week.</p>
 <h3 id="numba">Numba</h3>
 <p>Turning my code into actual Python packages and organizing it early on helped be greatly. Because the day after I had my first assignment where I would be using the code I previously wrote. I just found it so satisfying that I was importing and using my own library.</p>
@@ -89,7 +90,6 @@
 <p>The process I came up with was to first split the tracking data into independent licks, which I did simply through finding gaps in the footage where the tongue was absent- indicating a lick had been completed. After that I parametized the licks and normalized this parametization such that $0$ would always refer to the beginning of the lick and $1$ would refer to the end of the lick. Now I had a function for each lick which would take in a $t\in [0, 1]$ and return a point $(x_i, y_i)$, and all I had to do was enumerate $t$ from $0$ to $1$ and take the average of the points to create the final average trajectory.</p>
 <h3 id="next-week">Next Week</h3>
 <p>Next week I will be able to analyze the trajectories of the altered mice. There is also a final large feature that Paul wants to add to the WhiskerToolbox (the name will be changing soon since now it operates on a lot more than just whisker data), which is to add a final media type: graphs. Since the researchers often track quantities related to mice, it would be great for them to be able to have a time series data scrolling alongside the video player, instead of having to repeatedly cross reference video and time series data all the time. This process is especially tedious since they often don&rsquo;t have the same time scale. It may also be useful for them to be able to draw masks over some region of interest and plot a graph of the brightness of that region over time, for example.</p>
-
 
 
       

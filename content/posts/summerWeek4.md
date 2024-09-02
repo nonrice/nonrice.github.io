@@ -3,6 +3,10 @@ title = 'Tongue Tracking Continued (Week 4)'
 date = 2024-07-13T21:22:38-04:00
 draft = false  
 +++
+
+I had a chance to show some more advanced Python skills this week.
+<!--more-->
+
 ### Tongue Tracking
 So work has been getting interesting again. On Monday I reorganized the work from my lab code. It has an interestig structure. I wanted to keep the "useful messiness" of the workspace, but also have clean directories that are user friendly to others. The solution I came up with was to have a Makefile that would build these clean directories simply by using `cp` command. As I write this I realize another solution could just be to symlink them. I'll give it a try the start of next week.
 

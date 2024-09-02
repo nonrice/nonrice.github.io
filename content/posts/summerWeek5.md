@@ -4,6 +4,9 @@ date = 2024-07-28T22:57:28-04:00
 draft = false 
 +++
 
+I am back to working in WhiskerToolbox. Having knowledge on dynamic linking and app bundling on MacOS became very useful, as it turned out the target audience for this app was mainly Mac users.
+<!--more-->
+
 ### WhiskerToolbox: App Bundling
 In order to have other people be able to use the application, specifically on MacOS since many have Macs, it is necessary to bundle the compiled result into an app package. In the process we came across two very annoying issues.
 
