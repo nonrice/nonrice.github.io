@@ -19,7 +19,7 @@ Doing all these things required a lot of interaction with the API of the library
 I had a fully fledged graph viewer by Wednesday and continued to iron out some issues both with the graph viewer and in other parts of the application, which was being tested by Jun while labeling experiments. Finally on Thursday, after fully settling on the analog viewer, Paul gave me some demonstration data that I would use in the Friday presentation, which would be solely about WhiskerToolbox and the work I did on it. 
 
 ### Presentation Time
-I was surprised that I was not very nervous about the presentation. I had expected to be much more tense but overall I was able to talk fluidly through the presentation. After that I finished the day early, writing a final set of documentation for all of my code and then testing out the new TETR.IO updated which happened to release on the afternoon, right after my presentation.
+I was surprised that I was not very nervous about the presentation. I had expected to be much more tense but overall I was able to talk fluidly through the presentation. After that I finished the day early, writing a final set of documentation for all of my code and then testing out the new TETR.IO update which happened to release on the afternoon, right after my presentation.
 
 ### Last Chance To See... Maybe Not?
 I walked around the MIT campus to conclude my penultimate day in Cambridge and mainly saw some art galleries. They were interesting since they had some "true" modern art. One of the rooms was bewildering in what it contained as "art", sometimes being just a few objects taped to the wall.
