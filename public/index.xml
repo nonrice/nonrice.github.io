@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Eric Xue&#39;s Web Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://widefin.com/</link>
     <description>Recent content in Home on Eric Xue&#39;s Web Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Oct 2024 20:07:30 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://widefin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Long Way Back</title>
-      <link>http://localhost:1313/posts/runningrecovery/</link>
+      <link>https://widefin.com/posts/runningrecovery/</link>
       <pubDate>Tue, 01 Oct 2024 20:07:30 -0400</pubDate>
-      <guid>http://localhost:1313/posts/runningrecovery/</guid>
+      <guid>https://widefin.com/posts/runningrecovery/</guid>
       <description>&lt;p&gt;Around one year ago, I was a completely different runner than I am today. My cross country season ended in shambles with a stress fracture&amp;ndash;I was unable to run even a single mile.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Final Stretch (Week 6)</title>
-      <link>http://localhost:1313/posts/summerweek6/</link>
+      <link>https://widefin.com/posts/summerweek6/</link>
       <pubDate>Sun, 28 Jul 2024 23:30:05 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek6/</guid>
+      <guid>https://widefin.com/posts/summerweek6/</guid>
       <description>&lt;p&gt;I concluded my final week by adding a final large feature, doing lots of refactoring/documentation, and presenting it all at the lab meeting!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Me and Paul vs. CMake (Week 5)</title>
-      <link>http://localhost:1313/posts/summerweek5/</link>
+      <link>https://widefin.com/posts/summerweek5/</link>
       <pubDate>Sun, 21 Jul 2024 22:57:28 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek5/</guid>
+      <guid>https://widefin.com/posts/summerweek5/</guid>
       <description>&lt;p&gt;I am back to working in WhiskerToolbox. Having knowledge on dynamic linking and app bundling on MacOS became very useful, as it turned out the target audience for this app was mainly Mac users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tongue Tracking Continued (Week 4)</title>
-      <link>http://localhost:1313/posts/summerweek4/</link>
+      <link>https://widefin.com/posts/summerweek4/</link>
       <pubDate>Sat, 13 Jul 2024 21:22:38 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek4/</guid>
+      <guid>https://widefin.com/posts/summerweek4/</guid>
       <description>&lt;p&gt;I had a chance to show some more advanced Python skills this week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tongue Tracking (Week 3)</title>
-      <link>http://localhost:1313/posts/summerweek3/</link>
+      <link>https://widefin.com/posts/summerweek3/</link>
       <pubDate>Sun, 07 Jul 2024 12:32:02 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek3/</guid>
+      <guid>https://widefin.com/posts/summerweek3/</guid>
       <description>&lt;p&gt;This was a short week since the 4th and 5th were both holidays (I went on a whale watch!), followed immediately by the weekend. I mainly focused on a single thing during this week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Whisker Toolbox (Week 2)</title>
-      <link>http://localhost:1313/posts/summerweek2/</link>
+      <link>https://widefin.com/posts/summerweek2/</link>
       <pubDate>Tue, 25 Jun 2024 18:29:02 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek2/</guid>
+      <guid>https://widefin.com/posts/summerweek2/</guid>
       <description>&lt;p&gt;After the first week I had pretty much settled into Cambridge. After becoming more familiar with the lab&amp;rsquo;s work. I began doing more complicated tasks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting Started (Week 1)</title>
-      <link>http://localhost:1313/posts/summerweek1/</link>
+      <link>https://widefin.com/posts/summerweek1/</link>
       <pubDate>Sun, 23 Jun 2024 18:32:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek1/</guid>
+      <guid>https://widefin.com/posts/summerweek1/</guid>
       <description>&lt;p&gt;This summer I have a 6 week internship at the McGovern Institute for Brain Research and I want to document what I do there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
-      <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
+      <link>https://widefin.com/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
-      <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
+      <guid>https://widefin.com/posts/cachelocalityoptimization/</guid>
       <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
-      <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
+      <link>https://widefin.com/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
+      <guid>https://widefin.com/posts/sqrtdecompositiononqueries/</guid>
       <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
-      <link>http://localhost:1313/posts/easierbinarysearch/</link>
+      <link>https://widefin.com/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
-      <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
+      <guid>https://widefin.com/posts/easierbinarysearch/</guid>
       <description>&lt;p&gt;Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://widefin.com/about/</link>
       <pubDate>Fri, 02 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://widefin.com/about/</guid>
       <description>I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also like to make web-based applications and data science projects.&#xA;Away from the computer, I enjoy distance running, competitive Tetris, playing clarinet, and jump rope.&#xA;Much of my work is on my Github. Give it a visit!&#xA;Github Discord Online judges: Codeforces AtCoder LeetCode </description>
     </item>
   </channel>
