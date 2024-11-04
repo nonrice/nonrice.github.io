@@ -34,6 +34,9 @@ Currently I am finishing this tool and it should be ready the next week.
 The lab already created an application to play back the footage of the mice and overlay generated masks, also providing some other utilities. I was assigned to add features to this app related to tongue tracking and jaw tracking, one of which probably is to integrate the tool describe above into this application.
 
 ### Mouse nerve labeling
+
+![Brain...](/images/IMG_9964.jpeg)
+
 Using a light sheet microscope the lab created very detailed scans of mice head nervous systems. The process was interesting- the genetics of the mice were mutated such that their nerve cells would become flourescent. Then many chemicals were used to make their flesh translucent. When the light sheet microscope produced the correct type of light, all the nerve cells emitted light which would then be captured and processed.
 
 I initially thought that this task would be very difficult, since I had no knowledge of the anatomy of a mouse head, or even a human head for that matter. It turns out this task was easier than I thought. Each nerve, though complicated, in the end was still a single connected component. This meant that as long as I had a starting point to recognize each nerve with, the coloring process actually be very easy.

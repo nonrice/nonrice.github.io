@@ -3,6 +3,7 @@ title = 'A Whisker Toolbox (Week 2)'
 date = 2024-06-25T18:29:02-04:00
 draft = false  
 +++
+
 After the first week I had pretty much settled into Cambridge. After becoming more familiar with the lab's work. I began doing more complicated tasks. 
 <!--more-->
 
@@ -33,4 +34,5 @@ Living in Cambridge is better than I thought it'd be. I've gotten in the habit o
 The food is also not bad. Usually I eat at home but the Shojo Cambridge restaurant is good. For lunch so far I've tried Al's Tech Square Cafe and Area Four restaurant (other times I usually pack my own food) which are both very close to the MIBR building.
 
 ![Pizza](/images/IMG_0017.jpeg)
+
 

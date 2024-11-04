@@ -26,3 +26,5 @@ I walked around the MIT campus to conclude my penultimate day in Cambridge and m
 
 On Saturday I got on the train, leaving the way I came.
 
+![Group photo](/images/IMG_0294.jpeg)
+

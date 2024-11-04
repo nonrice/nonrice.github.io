@@ -89,7 +89,9 @@
 <p>Back to the codesigning topic: on my computer I was able to generate a self signing certificate and add sign the application with it. The next step was to get this signing process into the Github CI, which in the future would be used to automatically create releases of the application upon commits. This part was really irksome as well. I had created my codesigning certificate through a tool that, on MacOS, didn&rsquo;t really seem to have any kind of TUI counterpart, making it impossible to replicate the process on the cloud. Eventually it was Paul who found a working CMake codesigning action by some other people, and got it to work inside of our CI.</p>
 <h3 id="app-icon">App Icon</h3>
 <p>On Friday I quickly updated the CI to give the generated application an app icon. It reused the function for copying libraries, since all that was necessary to make an app icon was to copy a <code>.icns</code> file (which I generated from a PNG on (<a href="https://icns.kitchen">https://icns.kitchen</a>) into the <code>Resources</code> folder of the bundle.</p>
-<p><img src="/images/appicon2.png" alt="App Icon"></p>
+<p>
+  <img src="/images/appicon2.png" alt="App Icon">
+</p>
 <h3 id="tongue-tracking">Tongue Tracking</h3>
 <p>Continuing with tongue tracking since the beginning of the week, I was able to create analyses of many tongue tracking experiments of Jun&rsquo;s. However, on most of the results, the tracking result was not very good. For the two experiment results that were particularly well tracked, my diagrams were included in Jun&rsquo;s presentation on the lab meeting of Friday this week, which felt pretty great.</p>
 <h3 id="plan-for-the-final-week">Plan for the final week</h3>
