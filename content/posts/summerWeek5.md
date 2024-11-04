@@ -1,6 +1,6 @@
 +++
 title = 'Me and Paul vs. CMake (Week 5)'
-date = 2024-07-28T22:57:28-04:00
+date = 2024-07-21T22:57:28-04:00
 draft = false 
 +++
 

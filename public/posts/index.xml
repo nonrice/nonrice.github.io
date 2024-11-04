@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Eric Xue&#39;s Web Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 20:07:30 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2024 00:40:27 -0500</lastBuildDate>
     <atom:link href="https://widefin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Final Drawing</title>
+      <link>https://widefin.com/posts/finaldrawing/</link>
+      <pubDate>Mon, 04 Nov 2024 00:40:27 -0500</pubDate>
+      <guid>https://widefin.com/posts/finaldrawing/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Long Way Back</title>
       <link>https://widefin.com/posts/runningrecovery/</link>
@@ -25,7 +32,7 @@
     <item>
       <title>Me and Paul vs. CMake (Week 5)</title>
       <link>https://widefin.com/posts/summerweek5/</link>
-      <pubDate>Sun, 28 Jul 2024 22:57:28 -0400</pubDate>
+      <pubDate>Sun, 21 Jul 2024 22:57:28 -0400</pubDate>
       <guid>https://widefin.com/posts/summerweek5/</guid>
       <description>&lt;p&gt;I am back to working in WhiskerToolbox. Having knowledge on dynamic linking and app bundling on MacOS became very useful, as it turned out the target audience for this app was mainly Mac users.&lt;/p&gt;</description>
     </item>
