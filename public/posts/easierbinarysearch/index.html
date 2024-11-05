@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><meta charset="utf-8" />
+<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 
   <title>Easier Binary Search - Eric Xue&#39;s Web Site</title>
 
@@ -9,8 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-<link rel="stylesheet" href="https://widefin.com/css/latex.css" />
-<link rel="stylesheet" href="https://widefin.com/css/main.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 	MathJax = {
@@ -76,7 +76,7 @@
       </div>
       <br>
       
-    <p>Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p>
+    <p>Everyone knows the traditional binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&rsquo;t use <code>lower_bound</code> or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.</p>
 <p>Let $f(x)$ be a boolean function defined on the range $[l, r]$. It evaluates to $\text{true}$ for some prefix of $[l, r]$ and $\text{false}$ otherwise. We need to find the largest $x$ which gives a $\text{true}$ result. The implementation is as such:</p>
 <div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#d20f39">int</span> x <span style="color:#04a5e5;font-weight:bold">=</span> l<span style="color:#04a5e5;font-weight:bold">-</span><span style="color:#fe640b">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#8839ef">for</span> (<span style="color:#d20f39">int</span> step<span style="color:#04a5e5;font-weight:bold">=</span>r<span style="color:#04a5e5;font-weight:bold">-</span>l<span style="color:#04a5e5;font-weight:bold">+</span><span style="color:#fe640b">1</span>; step<span style="color:#04a5e5;font-weight:bold">&gt;=</span><span style="color:#fe640b">1</span>; step<span style="color:#04a5e5;font-weight:bold">/=</span><span style="color:#fe640b">2</span>){
@@ -100,11 +100,11 @@
         
         
         
-        <a href="https://widefin.com/">Eric Xue&#39;s Web Site</a>,
+        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
         
         &copy;
         2024
-        <a href="https://widefin.com/about/">Eric Xue</a>
+        <a href="http://localhost:1313/about/">Eric Xue</a>
       </p>
   </div>
 </footer></body>

@@ -6,7 +6,7 @@ draft = false
 
 This summer I have a 6 week internship at the McGovern Institute for Brain Research and I want to document what I do there.
 <!--more-->
-On my first day I met Jun and Paul who would oversee my work. It was intended that I help with data analysis and scientific programming which were my strenghts.
+On my first day I met Jun and Paul who would oversee my work. It was intended that I help with data analysis and scientific programming which were my strengths.
 
 ### First project 
 The Wang Lab where I spent my time studied the brain by using mice in experiments. One experiment collected data on the licking pattern of mice while they drank water. A high speed camera recorded the mice, whose heads were locked in place in a water-feeding contraption.
@@ -14,7 +14,7 @@ The Wang Lab where I spent my time studied the brain by using mice in experiment
 The goal was to accurately determine where the tongue was at all times by running segmentation processes on the video frames. 
 
 ### Cleaning up existing masks
-When I got to the lab a neural network was already created to perform this task. However, its output was not completely accurate, correctly segmenting the general region, but making mistakes on the boundary. One such mistake was the appearance of small "blobs" in the labelings which were not part of the tongue. To fix this I wrote a script to extract the segmentation data (it was stored in a special format) and remove all but the largest connected component of pixels, which is assumed to be the tongue. This was the first assignment I completed at the lab!
+When I got to the lab a neural network was already created to perform this task. However, its output was not completely accurate, correctly segmenting the general region, but making mistakes on the boundary. One such mistake was the appearance of small "blobs" in the labellings which were not part of the tongue. To fix this I wrote a script to extract the segmentation data (it was stored in a special format) and remove all but the largest connected component of pixels, which is assumed to be the tongue. This was the first assignment I completed at the lab!
 
 While this improved the segmentation masks by a bit, it turns out the underlying issue was faulty training data supplied to the neural network. The training data itself turned out to have labeling issues.
 

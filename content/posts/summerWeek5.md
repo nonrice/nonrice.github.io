@@ -13,7 +13,7 @@ In order to have other people be able to use the application, specifically on Ma
 ### `dylib` Bundling
 In an ironic twist even though we opted for dynamically linking most libraries, in order to ship an app bundle it was necessary to contain them in the finished bundle under the `Frameworks` folder. 
 
-If we simply handed the compiled result to someone, they would not be able to open it because the executable would be looking for files in the build directory of the developer's computer. In order to fix this we had to bundle all the libraries with the executable, then modify the exectuable's `rpath` to search for `.dylibs` in the new location. To do this for the Qt library there was a tool called `macdeployqt`. However it seems to mangle the application and cause it to be unopenable. The solution was to instead use Qt's function in CMake, which automatically generated a deploy script that worked.
+If we simply handed the compiled result to someone, they would not be able to open it because the executable would be looking for files in the build directory of the developer's computer. In order to fix this we had to bundle all the libraries with the executable, then modify the executable's `rpath` to search for `.dylibs` in the new location. To do this for the Qt library there was a tool called `macdeployqt`. However it seems to mangle the application and cause it to be un-openable. The solution was to instead use Qt's function in CMake, which automatically generated a deploy script that worked.
 
 In order to handle the other libraries, Paul wrote a CMake function to simply copy them into the necessary location and modify the `rpath`.
 

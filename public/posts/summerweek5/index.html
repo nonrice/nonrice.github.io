@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><meta charset="utf-8" />
+<html lang="en-us"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 
   <title>Me and Paul vs. CMake (Week 5) - Eric Xue&#39;s Web Site</title>
 
@@ -9,8 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-<link rel="stylesheet" href="https://widefin.com/css/latex.css" />
-<link rel="stylesheet" href="https://widefin.com/css/main.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/latex.css" />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css" />
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 	MathJax = {
@@ -81,7 +81,7 @@
 <p>In order to have other people be able to use the application, specifically on MacOS since many have Macs, it is necessary to bundle the compiled result into an app package. In the process we came across two very annoying issues.</p>
 <h3 id="dylib-bundling"><code>dylib</code> Bundling</h3>
 <p>In an ironic twist even though we opted for dynamically linking most libraries, in order to ship an app bundle it was necessary to contain them in the finished bundle under the <code>Frameworks</code> folder.</p>
-<p>If we simply handed the compiled result to someone, they would not be able to open it because the executable would be looking for files in the build directory of the developer&rsquo;s computer. In order to fix this we had to bundle all the libraries with the executable, then modify the exectuable&rsquo;s <code>rpath</code> to search for <code>.dylibs</code> in the new location. To do this for the Qt library there was a tool called <code>macdeployqt</code>. However it seems to mangle the application and cause it to be unopenable. The solution was to instead use Qt&rsquo;s function in CMake, which automatically generated a deploy script that worked.</p>
+<p>If we simply handed the compiled result to someone, they would not be able to open it because the executable would be looking for files in the build directory of the developer&rsquo;s computer. In order to fix this we had to bundle all the libraries with the executable, then modify the executable&rsquo;s <code>rpath</code> to search for <code>.dylibs</code> in the new location. To do this for the Qt library there was a tool called <code>macdeployqt</code>. However it seems to mangle the application and cause it to be un-openable. The solution was to instead use Qt&rsquo;s function in CMake, which automatically generated a deploy script that worked.</p>
 <p>In order to handle the other libraries, Paul wrote a CMake function to simply copy them into the necessary location and modify the <code>rpath</code>.</p>
 <h3 id="codesigning">Codesigning</h3>
 <p>Having made an app bundle myself before, I thought it was possible to run the newly packaged app without code signing. Unfortunately this wasn&rsquo;t the case, and it was probably because the signatures in the Qt libraries we moved into <code>Frameworks</code> became invalidated or something. Either way the app would crash, not because of any code error but because of the absence of a code signature upon opening.</p>
@@ -110,11 +110,11 @@
         
         
         
-        <a href="https://widefin.com/">Eric Xue&#39;s Web Site</a>,
+        <a href="http://localhost:1313/">Eric Xue&#39;s Web Site</a>,
         
         &copy;
         2024
-        <a href="https://widefin.com/about/">Eric Xue</a>
+        <a href="http://localhost:1313/about/">Eric Xue</a>
       </p>
   </div>
 </footer></body>

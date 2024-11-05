@@ -8,7 +8,7 @@ theme = "HugoTeX"
   abstract = """
   I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also like to make web-based applications and data science projects.
 
-Away from the computer, I enjoy distance running, competitive Tetris, playing clarinet, and jump rope.
+Away from the computer, I enjoy distance running, cycling, and playing frisbee. I also like to play competitive Tetris.
   """
 
 [markup.highlight]

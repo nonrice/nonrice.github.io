@@ -3,7 +3,7 @@ title = 'Easier Binary Search'
 date = 2024-02-10T21:24:35-04:00
 mathjax = true
 +++
-Everyone knows the traditinal binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can't use `lower_bound` or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.
+Everyone knows the traditional binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can't use `lower_bound` or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.
 <!--more-->
 
 Let $f(x)$ be a boolean function defined on the range $[l, r]$. It evaluates to $\text{true}$ for some prefix of $[l, r]$ and $\text{false}$ otherwise. We need to find the largest $x$ which gives a $\text{true}$ result. The implementation is as such:
