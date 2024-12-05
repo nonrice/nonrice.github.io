@@ -2,11 +2,8 @@
 title = 'About'
 date = 2024-02-02T20:33:41-04:00
 +++
-I am a student at McLean High School in Fairfax County. I have been programming for several years and I like competitive programming. I also like to make web-based applications and data science projects.
 
-Away from the computer, I enjoy distance running, cycling, and playing frisbee. I also like to play competitive Tetris.
+<!--more-->
+I am a student at McLean High School in Fairfax County. I have been programming for several years--right now I especially like competitive programming. I also spend time making [web-based applications and data science projects.](https://github.com/nonrice)
 
-Much of my work is on my Github. Give it a visit!
-- [Github](https://github.com/nonrice)
-- [Discord](https://discord.com/users/788749513519136792)
-- [Codeforces](https://codeforces.com/profile/nonrice)
+Away from the computer, I enjoy drawing, distance running, cycling, and playing frisbee. I'm also a competitive Tetris player!

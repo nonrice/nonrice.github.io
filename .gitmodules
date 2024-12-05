@@ -1,3 +1,6 @@
 [submodule "HugoTeX"]
     path = themes/HugoTeX 
     url = https://github.com/kaisugi/HugoTeX
+[submodule "themes/hugo-theme-console"]
+	path = themes/hugo-theme-console
+	url = https://github.com/mrmierzejewski/hugo-theme-console.git

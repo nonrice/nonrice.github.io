@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photos on Eric Xue&#39;s Website</title>
+    <link>http://localhost:1313/photos/</link>
+    <description>Recent content in Photos on Eric Xue&#39;s Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/photos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Another Side</title>
+      <link>http://localhost:1313/photos/still1/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/still1/</guid>
+      <description>The work portrays a smiling bust turned away from the rest of the composition, meant to represent the troubles of the modern world. Painted near the end of the lockdown era, it reflects the pressing issues amplified by mass media. While such issues are real, they often take an unfair toll on our daily lives. After all, how can we live in the present when we&amp;rsquo;re constantly worried about the future?</description>
+    </item>
+    <item>
+      <title>Bridge to the Past</title>
+      <link>http://localhost:1313/photos/still2/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/still2/</guid>
+      <description>hello</description>
+    </item>
+    <item>
+      <title>Go Show Them!</title>
+      <link>http://localhost:1313/photos/selfportrait/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/selfportrait/</guid>
+      <description>hello</description>
+    </item>
+    <item>
+      <title>Robot Chef</title>
+      <link>http://localhost:1313/photos/robot2/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/robot2/</guid>
+      <description>hello</description>
+    </item>
+  </channel>
+</rss>
