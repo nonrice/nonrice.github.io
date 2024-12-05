@@ -2,143 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eric Xue&#39;s Website</title>
-    <link>http://localhost:1313/</link>
+    <link>https://widefin.com/</link>
     <description>Recent content on Eric Xue&#39;s Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://widefin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robot Chef</title>
-      <link>http://localhost:1313/gallery/robot2/</link>
+      <link>https://widefin.com/gallery/robot2/</link>
       <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/robot2/</guid>
+      <guid>https://widefin.com/gallery/robot2/</guid>
       <description>In this modern kitchen, a robotic chef stands as a marvel of engineering. Yet just outside, an untouched wilderness grows, in contrast to the advanced technology within. The bold green of nature, despite being in the background, speaks to its enduring presence, yet simultaneously conveys nature&amp;rsquo;s relegation to an afterthought in the pursuit of progress. It captures the tension between innovation and environment, demonstrated in the sidelined treatment of nature in industries like lithium mining, with its role in battery production forming the backbone of technology development today.</description>
     </item>
     <item>
       <title>Long Way Back</title>
-      <link>http://localhost:1313/posts/runningrecovery/</link>
+      <link>https://widefin.com/posts/runningrecovery/</link>
       <pubDate>Tue, 01 Oct 2024 20:07:30 -0400</pubDate>
-      <guid>http://localhost:1313/posts/runningrecovery/</guid>
+      <guid>https://widefin.com/posts/runningrecovery/</guid>
       <description>&lt;p&gt;Around one year ago, I was a completely different runner than I am today. My cross country season ended in shambles with a stress fracture&amp;ndash;I was unable to run even a single mile.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Final Stretch (Week 6)</title>
-      <link>http://localhost:1313/posts/summerweek6/</link>
+      <link>https://widefin.com/posts/summerweek6/</link>
       <pubDate>Sun, 28 Jul 2024 23:30:05 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek6/</guid>
+      <guid>https://widefin.com/posts/summerweek6/</guid>
       <description>&lt;p&gt;I concluded my final week by adding a final large feature, doing lots of refactoring/documentation, and presenting it all at the lab meeting!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Me and Paul vs. CMake (Week 5)</title>
-      <link>http://localhost:1313/posts/summerweek5/</link>
+      <link>https://widefin.com/posts/summerweek5/</link>
       <pubDate>Sun, 21 Jul 2024 22:57:28 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek5/</guid>
+      <guid>https://widefin.com/posts/summerweek5/</guid>
       <description>&lt;p&gt;I am back to working in WhiskerToolbox. Having knowledge on dynamic linking and app bundling on MacOS became very useful, as it turned out the target audience for this app was mainly Mac users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tongue Tracking Continued (Week 4)</title>
-      <link>http://localhost:1313/posts/summerweek4/</link>
+      <link>https://widefin.com/posts/summerweek4/</link>
       <pubDate>Sat, 13 Jul 2024 21:22:38 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek4/</guid>
+      <guid>https://widefin.com/posts/summerweek4/</guid>
       <description>&lt;p&gt;I had a chance to show some more advanced Python skills this week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tongue Tracking (Week 3)</title>
-      <link>http://localhost:1313/posts/summerweek3/</link>
+      <link>https://widefin.com/posts/summerweek3/</link>
       <pubDate>Sun, 07 Jul 2024 12:32:02 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek3/</guid>
+      <guid>https://widefin.com/posts/summerweek3/</guid>
       <description>&lt;p&gt;This was a short week since the 4th and 5th were both holidays (I went on a whale watch!), followed immediately by the weekend. I mainly focused on a single thing during this week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Whisker Toolbox (Week 2)</title>
-      <link>http://localhost:1313/posts/summerweek2/</link>
+      <link>https://widefin.com/posts/summerweek2/</link>
       <pubDate>Tue, 25 Jun 2024 18:29:02 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek2/</guid>
+      <guid>https://widefin.com/posts/summerweek2/</guid>
       <description>&lt;p&gt;After the first week I had pretty much settled into Cambridge. After becoming more familiar with the lab&amp;rsquo;s work. I began doing more complicated tasks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting Started (Week 1)</title>
-      <link>http://localhost:1313/posts/summerweek1/</link>
+      <link>https://widefin.com/posts/summerweek1/</link>
       <pubDate>Sun, 23 Jun 2024 18:32:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/summerweek1/</guid>
+      <guid>https://widefin.com/posts/summerweek1/</guid>
       <description>&lt;p&gt;This summer I have a 6 week internship at the McGovern Institute for Brain Research and I want to document what I do there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Go Show Them!</title>
-      <link>http://localhost:1313/gallery/selfportrait/</link>
+      <link>https://widefin.com/gallery/selfportrait/</link>
       <pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/selfportrait/</guid>
+      <guid>https://widefin.com/gallery/selfportrait/</guid>
       <description>&amp;ldquo;The moment&amp;rdquo; could be anything&amp;ndash;a big sports competition, a class speech, or even something small, like taking a quiz. The length of the event could be quite long, maybe several hours. Yet I&amp;rsquo;ve noticed how it pales in comparison to the substantial anxiety I would feel in the many days leading up.&#xA;I&amp;rsquo;ve come to see it as a universal struggle, worse than others for some. How do I deal with it?</description>
     </item>
     <item>
       <title>Cache Locality Optimization</title>
-      <link>http://localhost:1313/posts/cachelocalityoptimization/</link>
+      <link>https://widefin.com/posts/cachelocalityoptimization/</link>
       <pubDate>Tue, 02 Apr 2024 18:08:20 -0400</pubDate>
-      <guid>http://localhost:1313/posts/cachelocalityoptimization/</guid>
+      <guid>https://widefin.com/posts/cachelocalityoptimization/</guid>
       <description>&lt;p&gt;There is the problem: &amp;ldquo;Given an array $a$ of length $n$ where, $1\leq a_i\leq 10^9$ and $1\leq n\leq 10^5$, count the ordered pairs $(i, j)$ such that $i&amp;lt;j$ and $a_i\&amp;amp; a_j = 0$ where $\&amp;amp;$ denotes the bitwise AND operation.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQRT Decomposition On Queries</title>
-      <link>http://localhost:1313/posts/sqrtdecompositiononqueries/</link>
+      <link>https://widefin.com/posts/sqrtdecompositiononqueries/</link>
       <pubDate>Tue, 20 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sqrtdecompositiononqueries/</guid>
+      <guid>https://widefin.com/posts/sqrtdecompositiononqueries/</guid>
       <description>&lt;p&gt;You can use SQRT Decomposition On Queries to solve range query problems with some kind of update operation. It is not as well documented as two popular algorithm SQRT based algorithms (Mo&amp;rsquo;s Algorithm, SQRT Decomposition).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Easier Binary Search</title>
-      <link>http://localhost:1313/posts/easierbinarysearch/</link>
+      <link>https://widefin.com/posts/easierbinarysearch/</link>
       <pubDate>Sat, 10 Feb 2024 21:24:35 -0400</pubDate>
-      <guid>http://localhost:1313/posts/easierbinarysearch/</guid>
+      <guid>https://widefin.com/posts/easierbinarysearch/</guid>
       <description>&lt;p&gt;Everyone knows the traditional binary search algorithm using $l$ and $r$ pointers. However to new CPers it is especially easy to make a bounds mistake. When I can&amp;rsquo;t use &lt;code&gt;lower_bound&lt;/code&gt; or the like I implement a different method of binary searching. It is similar to the binary lifting technique for trees.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://widefin.com/about/</link>
       <pubDate>Fri, 02 Feb 2024 20:33:41 -0400</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://widefin.com/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Bridge to the Past</title>
-      <link>http://localhost:1313/gallery/still2/</link>
+      <link>https://widefin.com/gallery/still2/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/still2/</guid>
+      <guid>https://widefin.com/gallery/still2/</guid>
       <description>This piece highlights my curiosity towards the evolution of computer hardware, focusing on the northbridge heatsink. This was a once-crucial part that that cooled the northbridge, which manages data flow between the CPU and other components. Nowadays the northbridge is largely integrated into the CPU itself, rendering the northbridge heatsink obsolete. I’ve used a fiery golden hue to honor this component&amp;rsquo;s past significance as a small tribute to the progression of technology.</description>
     </item>
     <item>
       <title>After the Roar</title>
-      <link>http://localhost:1313/gallery/face2/</link>
+      <link>https://widefin.com/gallery/face2/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/face2/</guid>
+      <guid>https://widefin.com/gallery/face2/</guid>
       <description></description>
     </item>
     <item>
       <title>Another Side</title>
-      <link>http://localhost:1313/gallery/still1/</link>
+      <link>https://widefin.com/gallery/still1/</link>
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/still1/</guid>
+      <guid>https://widefin.com/gallery/still1/</guid>
       <description>The work portrays a smiling bust turned away from the rest of the composition, meant to represent the troubles of the modern world. Painted near the end of the lockdown era, it reflects the pressing issues amplified by mass media. While such issues are real, they often take an unfair toll on our daily lives. After all, how can we live in the present when we&amp;rsquo;re constantly worried about the future?</description>
     </item>
     <item>
       <title>Blah</title>
-      <link>http://localhost:1313/gallery/skeletonfinal/</link>
+      <link>https://widefin.com/gallery/skeletonfinal/</link>
       <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/skeletonfinal/</guid>
+      <guid>https://widefin.com/gallery/skeletonfinal/</guid>
       <description>A skeleton lies at the bottom of the oceans, all alone. A few of his belongings surround him, but not to his benefit&amp;ndash;his sword is rusty and dull, and his riches are spilled open, ready to be plundered. Yet even in this unraveled state, the skeleton takes on a peculiar appearance with its vibrant colors. The pursuit of prestige is fast-paced and chaotic, but when events come to a rest, or perhaps unfortunately, to a permanent rest, one realizes how real happiness is found from within, ingrained boldly and vividly into their very bones.</description>
     </item>
     <item>
       <title>Some Objects</title>
-      <link>http://localhost:1313/gallery/still4/</link>
+      <link>https://widefin.com/gallery/still4/</link>
       <pubDate>Sun, 09 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/still4/</guid>
+      <guid>https://widefin.com/gallery/still4/</guid>
       <description></description>
     </item>
     <item>
       <title>Bust</title>
-      <link>http://localhost:1313/gallery/still3/</link>
+      <link>https://widefin.com/gallery/still3/</link>
       <pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery/still3/</guid>
+      <guid>https://widefin.com/gallery/still3/</guid>
       <description></description>
     </item>
   </channel>
